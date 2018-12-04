@@ -1,5 +1,10 @@
+.board {
+  width: 600px;
+}
+
 .marker{
   // To make squares
   width: calc(100% / 7);
   padding-top: calc(100% / 7);
+  border: 1px solid black;
 }
