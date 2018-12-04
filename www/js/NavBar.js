@@ -9,5 +9,4 @@ class NavBar extends Component {
       new NavItem('Ranklista', '/highscore')
     ];
   }
-
 }
