@@ -1,9 +1,20 @@
 class GamePage extends Component {
 
-  constructor(board, marker){
+
+  constructor() {
     super();
     this.addRoute('/play', 'Spela');
-    this.board = board;
-    this.marker = marker;
+    this.markers = [];
+    this.renderBoard();
+
   }
+    renderBoard(){
+      for (let row = 0; row < 6; row++) {
+        for (let col = 0; col < 7; col++) {
+          this.markers.push(new Marker(row, col));
+        }
+      }
+    }
+
+  
 }
