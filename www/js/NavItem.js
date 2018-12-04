@@ -5,5 +5,4 @@ class NavItem extends Component {
     this.name = name;
     this.url = url;
   }
-
 }
