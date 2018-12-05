@@ -1,6 +1,8 @@
 .board {
   width: 600px;  
   background: royalblue;
+  border: 5px solid royalblue;
+
 }
 
 .marker {
@@ -11,4 +13,5 @@
   background: white;
   border-radius: 50px;
   cursor: pointer;
+  padding:4px;
 }
