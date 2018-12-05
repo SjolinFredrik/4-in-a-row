@@ -1,5 +1,14 @@
-.marker{
+.board {
+  width: 600px;  
+  background: royalblue;
+}
+
+.marker {
   // To make squares
-  width: calc(100% / 7);
-  padding-top: calc(100% / 7);
+  width: calc(100%/7);
+  padding-top: calc(100%/7);
+  border: 2px solid royalblue;
+  background: white;
+  border-radius: 50px;
+  cursor: pointer;
 }
