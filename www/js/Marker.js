@@ -13,7 +13,7 @@ class Marker extends Component {
 
   click(e){
     e.stopPropagation();
-    this.board.columnClicked(this.col);
+    this.board.markerClicked(this.col);
   }
 
   testColor(){
