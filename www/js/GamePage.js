@@ -1,19 +1,27 @@
 class GamePage extends Component {
 
+ 
 
-  constructor() {
+  constructor(){
     super();
     this.addRoute('/play', 'Spela');
-    this.markers = [];
-    this.renderBoard();
-
+    this.playersForm = new PlayersForm();
+    this.addEvents({
+      'click .start-game': 'startGame'
+    });
   }
-  renderBoard() {
-    for (let row = 0; row < 6; row++) {
-      for (let col = 0; col < 7; col++) {
-        this.markers.push(new Marker(row, col));
-      }
-    }
+
+  // create a method to start the game with 2 players, and put them
+  // into one array So Game.js can catch this object.
+  startGame(){
+    let player1 = new Player(this.baseEl.find('#name1').val());
+    let player2 = new Player(this.baseEl.find('#name2').val());
+    this.game = new Game([player1, player2]);
+    this.render();
+  }
+
+  unmount(){
+    delete this.game;
   }
 
 
