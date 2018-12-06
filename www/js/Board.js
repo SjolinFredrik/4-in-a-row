@@ -3,7 +3,6 @@ class Board extends Component {
 
   constructor() {
     super();
-    this.addRoute('/board', 'Board');
     this.markers = [];
     this.renderBoard();
 
