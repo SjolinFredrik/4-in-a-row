@@ -12,3 +12,13 @@
   border-radius: 50px;
   cursor: pointer;
 }
+
+//marker 
+.marker.red > div > div{
+background-color: red;
+
+}
+
+.marker.yellow > div > div{
+  background-color: yellow;
+}
