@@ -1,4 +1,4 @@
-class Marker extends Component {
+class Cell extends Component {
 
    constructor(board, row, col){
     super();
