@@ -11,10 +11,6 @@ class Marker extends Component {
     });
   }
 
-  click(e){
-    e.stopPropagation();
-    this.board.markerClicked(this.col);
-  }
 
   testColor(){
     let r = Math.random();
