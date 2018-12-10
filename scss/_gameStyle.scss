@@ -3,22 +3,60 @@
   background: royalblue;
 }
 
-.marker {
-  // To make squares
-  width: calc(100%/7);
-  padding-top: calc(100%/7);
-  border: 2px solid royalblue;
-  background: white;
-  border-radius: 50px;
-  cursor: pointer;
+.cell {
+  width: 14.28%;
+
 }
 
+.cell > div {
+  padding-top: 100%;
+  position:relative;
+  background-color: blue;
+
+}
+
+.cell > div > div {
+  position:absolute;
+  top:10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: white;
+}
+
+ 
+
+.cell.red  > div > div {
+
+  background-color: red;
+
+ }
+
+ 
+
+.cell.yellow  > div > div {
+
+  background-color: yellow;
+
+}
+
+// // .marker {
+// //   // To make squares
+// //   width: calc(100%/7);
+// //   padding-top: calc(100%/7);
+// //   border: 2px solid royalblue;
+// //   background: white;
+// //   border-radius: 50px;
+// //   cursor: pointer;
+// // }
+
 //marker 
-.marker.red > div > div{
+.cell.red > div > div{
 background-color: red;
 
 }
 
-.marker.yellow > div > div{
+.cell.yellow > div > div{
   background-color: yellow;
 }
