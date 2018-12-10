@@ -1,8 +1,28 @@
-.board {
+/*.board {
   width: 600px;  
   background: royalblue;
+}*/
+
+.marker{
+  width: 14.28%;
 }
 
+.marker > div {
+  padding-top: 100%;
+  position:relative;
+  background-color: blue;
+}
+ 
+.marker > div > div {
+  position:absolute;
+  top:10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: white;
+}
+/*
 .marker {
   // To make squares
   width: calc(100%/7);
@@ -12,7 +32,7 @@
   border-radius: 50px;
   cursor: pointer;
 }
-
+*/ 
 //marker 
 .marker.red > div > div{
 background-color: red;
