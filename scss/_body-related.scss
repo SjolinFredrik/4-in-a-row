@@ -1,5 +1,5 @@
 body > div {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Oxygen', sans-serif;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -9,7 +9,8 @@ main {
   flex: 1;
 }
 
-h2, p{
-  font-family: 'Oxygen', sans-serif;
-  color: rgba(255, 166, 0, 0.829);
+h2{
+  font-family: 'Quicksand', sans-serif;
+  color: #FF7400;
+  font-weight: 300;
 }
