@@ -13,8 +13,8 @@ class GamePage extends Component {
   // create a method to start the game with 2 players, and put them
   // into one array So Game.js can catch this object.
   startGame(){
-    let player1 = new Player(this.baseEl.find('#name1').val());
-    let player2 = new Player(this.baseEl.find('#name2').val());
+    let player1 = new Player(this.baseEl.find('#name1').val(), 'red');
+    let player2 = new Player(this.baseEl.find('#name2').val(), 'yellow');
     this.game = new Game([player1, player2]);
     Store.navbar.showingCancelButton = true;
     Store.navbar.render();

@@ -5,5 +5,6 @@ class Game extends Component {
       super();
       this.players = players;
       this.board = new Board();
+      this.startingPlayer = player1;
   }
 }
