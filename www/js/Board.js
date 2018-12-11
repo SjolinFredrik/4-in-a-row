@@ -17,8 +17,8 @@ class Board extends Component {
     }
   }
 
-  onmarkerClicked(){
-  alert('You clicked  ' + col)
+  cellClicked(col){
+  console.log('You clicked  ' + col)
   }
 
 }
