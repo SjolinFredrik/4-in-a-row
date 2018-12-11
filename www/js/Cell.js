@@ -1,4 +1,4 @@
-class Marker extends Component {
+class Cell extends Component {
 
    constructor(board, row, col){
     super();
@@ -9,14 +9,15 @@ class Marker extends Component {
     this.addEvents({
       'click div': 'click'
     });
+    this.playerColor();
   }
 
   click(e){
     e.stopPropagation();
-    this.board.columnClicked(this.col);
+    this.board.cellClicked(this.col);
   }
 
-  testColor(){
+  playerColor(){
     let r = Math.random();
     this.color = r < .3 ? 'yellow': this.color;
     this.color = r > .7 ? 'red': this.color;

@@ -1,23 +1,24 @@
 class Board extends Component {
 
-
   constructor() {
     super();
-    this.markers = [];
-    this.renderBoard();
+    this.cells = [];
+    this.createBoard();
 
   }
-  renderBoard() {
-    for (let row = 0; row < 6; row++) {
-      for (let col = 0; col < 7; col++) {
-        this.markers.push(new Marker(row, col));
+  createBoard() {
+    this.board =[];
+    for (let row = 0; row <= 5; row++) {
+      let rowArray = [];
+      for (let col = 0; col <= 6; col++) {
+        rowArray.push(new Cell(this, row, col));
       }
+      this.board.push(rowArray);
     }
   }
 
-  onmarkerClick(){
-    
+  cellClicked(col){
+  alert('You clicked  ' + col)
   }
-
 
 }
