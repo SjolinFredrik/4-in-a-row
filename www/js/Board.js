@@ -17,13 +17,8 @@ class Board extends Component {
     }
   }
 
-<<<<<<< HEAD
-  columnClicked(){
-    
-=======
   onmarkerClicked(){
   alert('You clicked  ' + col)
->>>>>>> Dev
   }
 
 }
