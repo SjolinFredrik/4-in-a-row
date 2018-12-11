@@ -11,11 +11,12 @@ class Game extends Component {
   }
 
   changeCurrentPlayer() {
-    if(currentPlayer === 'red'){
-      currentPLayer === 'yellow'
-    } else if(currentPLayer === 'yellow'){
-      currentPlayer === 'red'
+    if(currentPlayer[0]){
+      currentPLayer === currentPLayer[1]  
+      } else if(currentPLayer[1]){
+      currentPlayer === currentPlayer[0]
     }
+    this.render();
 
   }
 }
