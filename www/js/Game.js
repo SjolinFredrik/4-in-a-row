@@ -5,5 +5,17 @@ class Game extends Component {
       super();
       this.players = players;
       this.board = new Board();
+
+      this.currentPlayer = startingPlayer;
+      this.changeCurrentPlayer;
+  }
+
+  changeCurrentPlayer() {
+    if(currentPlayer === 'red'){
+      currentPLayer === 'yellow'
+    } else if(currentPLayer === 'yellow'){
+      currentPlayer === 'red'
+    }
+
   }
 }
