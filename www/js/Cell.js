@@ -16,7 +16,6 @@ class Cell extends Component {
   click(e) {
     this.color = this.game.currentPlayer.color;
     console.log('clicked cell');
-    for (let col=6; col >)
     this.render();
     this.game.changePlayer();
   }
