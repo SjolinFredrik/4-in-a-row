@@ -1,3 +1,12 @@
+.action {
+  cursor:pointer;
+}
+
+.disabled {
+  opacity: 0.2;
+  cursor: default;
+}
+
 .board {
   width: 600px;  
   background: royalblue;
@@ -11,7 +20,7 @@
 .cell > div {
   padding-top: 100%;
   position:relative;
-  background-color: blue;
+  //background-color: blue;
 
 }
 
@@ -25,19 +34,32 @@
   background-color: white;
 }
 
- 
-
-.cell.red  > div > div {
-
-  background-color: red;
-
+.cell > div > div.red {
+   background-color: red;
  }
 
+ .cell > div > div.yellow {
+   background-color: yellow;
+ }
+//  .cell  > div > div {
+//   background-color: red;
+// }
+
  
 
-.cell.yellow  > div > div {
+// .cell > div > div {
+//   background-color: yellow;
+// }
 
-  background-color: yellow;
+// .marker {
+//   // To make squares
+//   width: calc(100%/7);
+//   padding-top: calc(100%/7);
+//   border: 2px solid royalblue;
+//   background: white;
+//   border-radius: 50px;
+//   cursor: pointer;
+// }
 
 }
 
