@@ -1,16 +1,20 @@
 body > div {
-  font-family: 'Oxygen', sans-serif;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+
+  @font-face{
+    font-family: 'Ailerons'; 
+    src: url('/www/fonts/Ailerons-Regular.otf'), sans-serif;
+  }
 }
 
 main {
   flex: 1;
 }
 
-h2{
-  font-family: 'Quicksand', sans-serif;
+h2, h4{
+  font-family: 'Oxygen', sans-serif;
   color: #FF7400;
   font-weight: 300;
 }
@@ -19,4 +23,9 @@ h2{
   .paddingl {
     padding-left: 0 !important;
   }
+}
+
+footer > p{
+  font-family: 'Oxygen', sans-serif;
+
 }
