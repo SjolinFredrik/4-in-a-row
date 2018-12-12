@@ -1,0 +1,62 @@
+.action {
+  cursor:pointer;
+}
+
+.disabled {
+  opacity: 0.2;
+  cursor: default;
+}
+
+.board {
+  width: 600px;  
+  background: royalblue;
+}
+
+.cell {
+  width: 14.28%;
+
+}
+
+.cell > div {
+  padding-top: 100%;
+  position:relative;
+  //background-color: blue;
+
+}
+
+.cell > div > div {
+  position:absolute;
+  top:10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.cell > div > div.red {
+   background-color: red;
+ }
+
+ .cell > div > div.yellow {
+   background-color: yellow;
+ }
+
+  // Small devices (landscape phones, less than 768px)
+  @media (max-width: 375px) {
+    max-width: 300px;
+
+  }
+  
+
+ @media (max-width: 575.98px) { 
+   .board {
+     max-width: 400px;
+ }
+ }
+
+ // Medium devices (tablets, less than 992px)
+ @media (max-width: 991.98px) {
+
+ }
+ 
