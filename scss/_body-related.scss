@@ -14,3 +14,9 @@ h2{
   color: #FF7400;
   font-weight: 300;
 }
+
+@media (max-width: 991.98px) {
+  .paddingl {
+    padding-left: 0 !important;
+  }
+}
