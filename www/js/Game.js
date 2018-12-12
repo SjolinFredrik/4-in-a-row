@@ -4,6 +4,7 @@ class Game extends Component {
   constructor(players, color) {
       super();
       this.players = players;
+      this.currentPlayer = players[0];
       this.changePlayer();
       this.board = new Board(this);
   }
