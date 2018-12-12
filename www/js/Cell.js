@@ -1,25 +1,23 @@
 class Cell extends Component {
 
-   constructor(board, row, col){
+  constructor(game, row, col) {
     super();
-    this.board = board;
+    this.game = game;
     this.row = row;
     this.col = col;
-    this.color = ""; 
+    this.color = "";
+
     this.addEvents({
-      'click div': 'click'
+      'click div>div': 'click'
     });
-    this.playerColor();
+
   }
 
-  click(e){
-    e.stopPropagation();
-    this.board.cellClicked(this.col);
+  click(e) {
+    this.color = this.game.currentPlayer.color;
+    console.log('clicked cell');
+    this.render();
+    this.game.changePlayer();
   }
-
-  playerColor(){
-    let r = Math.random();
-    this.color = r < .3 ? 'yellow': this.color;
-    this.color = r > .7 ? 'red': this.color;
-  }
+   
 }

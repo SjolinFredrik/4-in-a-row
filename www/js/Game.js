@@ -4,20 +4,12 @@ class Game extends Component {
   constructor(players, color) {
       super();
       this.players = players;
-      this.board = new Board();
-      this.startingPlayer = player1;
-
-      this.currentPlayer = startingPlayer;
-      this.changeCurrentPlayer;
+      this.currentPlayer = players[0];
+      this.changePlayer();
+      this.board = new Board(this);
   }
 
-  changeCurrentPlayer() {
-    if(currentPlayer[0]){
-      currentPLayer === currentPLayer[1]  
-      } else if(currentPLayer[1]){
-      currentPlayer === currentPlayer[0]
-    }
-    this.render();
-
+  changePlayer(){
+    this.currentPlayer = this.currentPlayer === this.players[0] ? this.players[1] : this.players[0]; 
   }
 }

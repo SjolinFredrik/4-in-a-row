@@ -21,6 +21,7 @@ class GamePage extends Component {
     this.render();
   }
 
+
   unmount(){
     delete this.game;
   }

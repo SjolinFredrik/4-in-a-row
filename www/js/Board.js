@@ -1,24 +1,24 @@
 class Board extends Component {
 
-  constructor() {
+  constructor(game) {
     super();
     this.cells = [];
-    this.createBoard();
+    this.game = game;
 
+    
+    this.createBoard();
   }
+
   createBoard() {
-    this.board =[];
+    this.board = [];
     for (let row = 0; row <= 5; row++) {
       let rowArray = [];
       for (let col = 0; col <= 6; col++) {
-        rowArray.push(new Cell(this, row, col));
+        rowArray.push(new Cell(this.game, row, col));
       }
       this.board.push(rowArray);
     }
   }
 
-  cellClicked(col){
-  alert('You clicked  ' + col)
-  }
-
+  
 }
