@@ -41,33 +41,22 @@
  .cell > div > div.yellow {
    background-color: yellow;
  }
-//  .cell  > div > div {
-//   background-color: red;
-// }
 
+  // Small devices (landscape phones, less than 768px)
+  @media (max-width: 375px) {
+    max-width: 300px;
+
+  }
+  
+
+ @media (max-width: 575.98px) { 
+   .board {
+     max-width: 400px;
+ }
+ }
+
+ // Medium devices (tablets, less than 992px)
+ @media (max-width: 991.98px) {
+
+ }
  
-
-// .cell > div > div {
-//   background-color: yellow;
-// }
-
-// .marker {
-//   // To make squares
-//   width: calc(100%/7);
-//   padding-top: calc(100%/7);
-//   border: 2px solid royalblue;
-//   background: white;
-//   border-radius: 50px;
-//   cursor: pointer;
-// }
-
-
-// // .marker {
-// //   // To make squares
-// //   width: calc(100%/7);
-// //   padding-top: calc(100%/7);
-// //   border: 2px solid royalblue;
-// //   background: white;
-// //   border-radius: 50px;
-// //   cursor: pointer;
-// // }
