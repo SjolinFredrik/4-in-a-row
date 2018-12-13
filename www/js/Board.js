@@ -2,23 +2,35 @@ class Board extends Component {
 
   constructor(game) {
     super();
-    this.cells = [];
+    this.board = [];
     this.game = game;
 
-    
     this.createBoard();
   }
 
   createBoard() {
-    this.board = [];
-    for (let row = 0; row <= 5; row++) {
-      let rowArray = [];
-      for (let col = 0; col <= 6; col++) {
-        rowArray.push(new Cell(this.game, row, col));
+
+    for (let row = 0; row < 6; row++) {
+      let row = [];
+      for (let col = 0; col < 7; col++) {
+        row.push(new Cell(this.game, row, col));
       }
-      this.board.push(rowArray);
+      this.board.push(row);
     }
   }
 
-  
+  makeMove(col) {
+    for (let row = 5; row >= 0; row--) {
+
+      if (this.board[row][col].color === "") {
+        this.board[row][col].color = this.game.currentPlayer.color;
+        this.board[row][col].render();
+        this.game.changePlayer();
+        break;
+      }
+    }
+    return false;
+  }
+
+
 }
