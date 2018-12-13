@@ -42,6 +42,10 @@
    background-color: yellow;
  }
 
+ .action{
+   cursor: pointer;
+ }
+
   // Small devices (landscape phones, less than 768px)
   @media (max-width: 350px) {
     max-width: 300px;
