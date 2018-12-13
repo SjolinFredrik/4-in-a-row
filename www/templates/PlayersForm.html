@@ -1,57 +1,37 @@
-<div class="container mt-4 mb-3" data-instance-id="6">
-
-
-  <div class="game" data-instance-id="9">
-
-
-    <!--This might be removed to only be in the player template-->
-    <!--But for now I need to have my html code here-->
-    <!-- since I have no clue how I integrate a template to another-->
-
-    <!--Player 2 input and choice of type-->
-    <div>
-      <h2 class="col-md-4">Spelare 1</h2>
-      <div class="input-group mb-3 col-md-4">
-        <input type="text" class="form-control" id="name1" placeholder="Ange namn.." aria-label="Recipient's username"
-          aria-describedby="button-addon2">
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary mb-2" type="button" id="button-addon2">Button</button>
-        </div>
-      </div>
+<div>
+  <!--Player 1 input and choice of type-->
+  <div>
+    <h2 class="choose-playerOne col-md-4 mt-5">Spelare 1</h2>
+    <div class="input-group mb-3 col-md-4">
+      <input type="text" class="form-control" id="name1" placeholder="Ange namn.." aria-label="Recipient's username"
+        aria-describedby="button-addon2">
     </div>
-    <div class="dropdown col-md-4">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
-        Vad är du?
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenu2" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(14px, 38px, 0px);">
-        <button class="dropdown-item" type="button">Människa</button>
-        <button class="dropdown-item" type="button">Dator</button>
-      </div>
-    </div>
-
-    <!--Player 2 input and choice of type-->
-    <div>
-      <h2 class="col-md-4">Spelare 2</h2>
-      <div class="input-group mb-3 col-md-4">
-        <input type="text" class="form-control" id="name2" placeholder="Ange namn.." aria-label="Recipient's username"
-          aria-describedby="button-addon2">
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary mb-2" type="button" id="button-addon2">Button</button>
-        </div>
-      </div>
-    </div>
-    <div class="dropdown col-md-4">
-      <button class="btn btn-secondary dropdown-toggle mb-2" type="button" id="dropdownMenu2" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
-        Vad är du?
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-        <button class="dropdown-item" type="button">Människa</button>
-        <button class="dropdown-item" type="button">Dator</button>
-      </div>
-    </div>
-    <button type="button" class="btn start-game btn-primary link-button">Play the game</button>
+  </div>
+  <div class="bot human col-md-4 mt-5">
+    <div>Typ av spelare?</div>
+    <input type="radio" name="player1" id="human">
+    <label for="human">Människa</label>
+    <input type="radio" name="player1" id="computer">
+    <label for="computer">Dator</label>
   </div>
 
+  <!--Player 2 input and choice of type-->
+  <div>
+    <h2 class="choose-playerTwo col-md-4 mt-5">Spelare 2</h2>
+    <div class="input-group mb-3 col-md-4">
+      <input type="text" class="form-control" id="name2" placeholder="Ange namn.." aria-label="Recipient's username"
+        aria-describedby="button-addon2">
+    </div>
+  </div>
+
+  <div class="bot human col-md-4 mt-5">
+    <div>Typ av spelare?</div>
+    <input type="radio" name="player2" id="human">
+    <label for="human">Människa</label>
+    <input type="radio" name="player2" id="computer">
+    <label for="computer">Dator</label>
+  </div>
+  <div>
+    <button type="button" class="btn start-game btn-primary link-button col-md-2 mt-5">Börja spela!</button>
+  </div>
 </div>
