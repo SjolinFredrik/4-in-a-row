@@ -6,7 +6,6 @@ class Cell extends Component {
     this.row = row;
     this.col = col;
     this.color = "";
-
     this.addEvents({
       'click div>div': 'click'
     });
@@ -14,10 +13,7 @@ class Cell extends Component {
   }
 
   click(e) {
-    this.color = this.game.currentPlayer.color;
-    console.log('clicked cell');
-    this.render();
-    this.game.changePlayer();
-  }
-   
+    this.game.board.makeMove(this.col);
+   }
+
 }
