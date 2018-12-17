@@ -47,20 +47,17 @@
  }
 
   // Small devices (landscape phones, less than 768px)
-  @media (max-width: 375px) {
-    max-width: 300px;
+  @media (max-width: 350px) {
+    max-width: 100%;
 
   }
   
 
  @media (max-width: 575.98px) { 
    .board {
-     max-width: 400px;
+     max-width: 100%;
  }
  }
 
- // Medium devices (tablets, less than 992px)
- @media (max-width: 991.98px) {
 
- }
  
