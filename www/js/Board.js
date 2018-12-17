@@ -31,6 +31,19 @@ class Board extends Component {
     }
     return false;
   }
+  /*  //Horizontal 
+checkIfWin(){
+  this.color = 'red', 'yellow';
+  for (let color of colors);
+  for (let row= 0; row>= 6; row++);
+  for(let col=0; col>= 4; col++);
+  for (let i= 0; i>=3; i++);
+  this.board[row][col].value == i;
+  if ((this.board[row][col + 1].value == i);
 
 
 }
+}
+*/
+}
+
