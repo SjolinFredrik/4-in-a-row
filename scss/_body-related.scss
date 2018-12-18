@@ -10,9 +10,12 @@ main {
 }
 
 h2{
-  font-family: 'Quicksand', sans-serif;
-  color: #FF7400;
-  font-weight: 300;
+  @font-face {
+    font-family: 'ONEDAY', sans-serif;
+    src: url('/www/Fonts/ONEDAY.otf');  
+    color: #FF7400;
+   font-weight: 300;
+}
 }
 
 @media (max-width: 991.98px) {
