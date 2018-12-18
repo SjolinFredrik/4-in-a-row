@@ -1,9 +1,8 @@
 class Bot extends Component {
 
-  constructor (player1,player2) {
+  constructor (players) {
     super();
-    this.bot = bot;
-    
-
+   
+    }
   }
-}
+  
