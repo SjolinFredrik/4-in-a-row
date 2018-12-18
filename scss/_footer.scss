@@ -5,6 +5,14 @@ footer > p{
       }
   }
 i {
-  font-size: 30px;
+  font-size: 35px;
   margin-bottom: 10px;
+
+}
+
+footer > p{
+    @font-face {
+        font-family: 'ONEDAY', sans-serif;
+        src: url('/www/Fonts/ONEDAY.otf');
+    }
 }
