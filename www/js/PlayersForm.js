@@ -11,6 +11,8 @@ class PlayersForm extends Component {
     $(e.target).removeClass('untouched')
   }
   /*******************************VALIDATION OF INPUT NAMES*******************************/
+  // method called upon at the GamePage.js
+  // Here the validation starts.
   validateInputNames() {
     // Find the id class in the input tag
     let input = document.getElementById('name1');
@@ -20,7 +22,6 @@ class PlayersForm extends Component {
 
 
     if (playerOne.length < 2 || playerOne.length > 10) {
-      console.log(playerOne);
       // Erase the class pattern pre-installed msg. And use the devs choice.
       input.oninvalid = function (event) {
         event.target.setCustomValidity('Du får bara använda 2-10 bokstäver!');
