@@ -6,10 +6,10 @@ class Cell extends Component {
     this.row = row;
     this.col = col;
     this.color = "";
+
     this.addEvents({
       'click div>div': 'click'
     });
-
   }
 
   click(e) {
