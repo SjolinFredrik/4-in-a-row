@@ -1,0 +1,16 @@
+input {
+  outline: none;
+}
+
+input:focus:invalid {
+  border-color: red;
+}
+
+input.untouched {
+  border-color: rgb(163, 163, 163);
+  box-shadow: none;
+}
+
+input:valid {
+  border-color: rgb(15, 233, 80) !important;
+}
