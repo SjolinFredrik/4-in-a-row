@@ -9,8 +9,7 @@ class Cell extends Component {
     this.addEvents({
       'click div>div': 'click'
     });
-
-  }
+    }
 
   click(e) {
     this.game.board.makeMove(this.col);
