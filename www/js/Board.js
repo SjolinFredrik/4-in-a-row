@@ -37,20 +37,22 @@ class Board extends Component {
 
   checkForWin() {
     let winnerColor;
-
     if (this.checkVerticals() === 'yellow' || this.checkVerticals() === 'red') {
       winnerColor = this.checkVerticals();
       alert(winnerColor + ' wins');
+
     } else if (this.checkHorizontals() === 'yellow' || this.checkVerticals() === 'red') {
       winnerColor = this.checkHorizontals();
       alert(winnerColor + ' wins');
+
     } else if (this.checkDiagonalsBLtoTR() === 'yellow' || this.checkDiagonalsBLtoTR() === 'red') {
-      winnerColor = this.checkDiagonalslBLtoTR();
+      winnerColor = this.checkDiagonalsBLtoTR();
       alert(winnerColor + ' wins');
-    }// if (this.checkDiagonalsTLtoBR() === 'yellow' || this.checkDiagonalsTLtoBR() === 'red') {
-    //   winnerColor = this.checkDiagonalsTLtoBR();
-    //   alert(winnerColor + ' wins');
-    //}
+
+    } else if (this.checkDiagonalsTLtoBR() === 'yellow' || this.checkDiagonalsTLtoBR() === 'red') {
+      winnerColor = this.checkDiagonalsTLtoBR();
+      alert(winnerColor + ' wins');
+    }
   }
 
   checkHorizontals() {
@@ -61,7 +63,6 @@ class Board extends Component {
           let won = true;
           for (let i = 0; i < 4; i++) {
             if (col + i > 6) {
-
               // this column does not exists so just set won to false
               // and skip this iteration of the loop / continue
               won = false;
@@ -81,7 +82,7 @@ class Board extends Component {
   checkVerticals() {
     let colors = ['red', 'yellow'];
     for (let color of colors) {
-      for (let row = 0; row < 6; row++) {
+      for (let row = 0; row <= 3; row++) {
         for (let col = 0; col < 7; col++) {
           let won = true;
           for (let i = 0; i < 4; i++) {
@@ -108,16 +109,11 @@ class Board extends Component {
         for (let col = 0; col < 7; col++) {
           let won = true;
           for (let i = 0; i < 4; i++) {
-            if (row + i > 5) {
-              // this column does not exists so just set won to false
-              // and skip this iteration of the loop / continue
+            if(row - i < 0 || col + i > 6){
               won = false;
               continue;
             }
-            if ((this.board[row - 1][col + 1].color == i) && (this.board[row - 2][col + 2].color == i) && (this.board[row - 3][col + 3].color == i)){
-               
-            }
-            won = won && this.board[row + i][col].color === color;
+            won = won && this.board[row - i][col + i].color === color;
           }
           if (won) { return color; }
         }
@@ -126,25 +122,25 @@ class Board extends Component {
     return false;
   }
 
-  // checkDiagonalsTLtoBR() {
-  //   let colors = ['red', 'yellow'];
-  //   for (let color of colors) {
-  //     for (let row = 0; row < 6; row++) {
-  //       for (let col = 0; col < 7; col++) {
-  //         let won = true;
-  //         for (let i = 0; i < 4; i++) {
-  //           if (row + i > 5) {
-  //             // this column does not exists so just set won to false
-  //             // and skip this iteration of the loop / continue
-  //             won = false;
-  //             continue;
-  //           }
-  //           won = won && this.board[row + i][col].color === color;
-  //         }
-  //         if (won) { return color; }
-  //       }
-  //     }
-  //   }
-  //   return false;
-  // }
+
+  checkDiagonalsTLtoBR() {
+    let colors = ['red', 'yellow'];
+    for (let color of colors) {
+      for (let row = 0; row < 6; row++) {
+        for (let col = 0; col < 7; col++) {
+          let won = true;
+          for (let i = 0; i < 4; i++) {
+            if(row + i > 5 || col + i > 6){
+              won = false;
+              continue;
+            }
+            won = won && this.board[row + i][col + i].color === color;
+          }
+          if (won) { return color; }
+        }
+      }
+    }
+
+    return false;
+  }
 }
