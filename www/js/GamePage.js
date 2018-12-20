@@ -15,7 +15,7 @@ class GamePage extends Component {
   startGame() {
     let player1 = new Player(this.baseEl.find('#name1').val(), 'red');
     let player2 = new Player(this.baseEl.find('#name2').val(), 'yellow');
-    
+
     // Calls on the method for the validation that's created
     // in the PlayersForm.js, when the validation is a succsess the game starts.
     if (this.playersForm.validateInputNames()) {
@@ -24,9 +24,11 @@ class GamePage extends Component {
       Store.navbar.render();
       this.render();
     }
+
   }
+
   unmount() {
     delete this.game;
   }
-  
+
 }
