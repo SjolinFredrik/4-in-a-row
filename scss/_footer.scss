@@ -1,4 +1,18 @@
+footer > p{
+    @font-face {
+        font-family: 'ONEDAY', sans-serif;;
+        src: url('/www/fonts/ONEDAY.ttf');
+      }
+  }
 i {
   font-size: 35px;
   margin-bottom: 15px;
+
+}
+
+footer > p{
+    @font-face {
+        font-family: 'ONEDAY', sans-serif;
+        src: url('/www/Fonts/ONEDAY.otf');
+    }
 }
