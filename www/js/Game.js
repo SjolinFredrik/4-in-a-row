@@ -16,3 +16,19 @@ class Game extends Component {
       this.render();
   }
 }
+startGame(){
+  this.Board.renderBoard();
+  this.playerName = this.player1.name;
+  this.activePlayer = 1;
+  this.winner = '';
+  this.moveCounter1 = 0;
+  this.moveCounter2 = 0;
+  this.winCount = 0;
+  this.render();
+  if (this.checkIfTwoComp()) {
+    this.runTwoComp();
+  }
+  else if (this.checkType() === 'Computer') {
+    this.fall2(Math.floor(Math.random() * 7));
+  }
+}
