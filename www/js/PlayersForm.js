@@ -3,14 +3,24 @@ class PlayersForm extends Component {
   constructor() {
     super();
     this.addEvents({
-      'change .untouched': 'changeColor'
+      'change .untouched': 'changeColor',
+      'keydown input[type="text"]': 'resetValidity'
+    });
+
+  /*******************************VALIDATION OF INPUT NAMES*******************************/
+  }
+  // This method is made cause otherwise setCustomValidity in the validateInputNames
+  // things it's a permanent msg and won't get away even if you type in the right name
+  resetValidity(){
+    this.baseEl.find('input[type="text"]').each(function(){
+      this.setCustomValidity('');
     });
   }
-
+  // Remove the grey color from the input field when it is targeted.
   changeColor(e) {
     $(e.target).removeClass('untouched')
   }
-  /*******************************VALIDATION OF INPUT NAMES*******************************/
+  
   // method called upon at the GamePage.js
   // Here the validation starts.
   validateInputNames() {
@@ -19,7 +29,6 @@ class PlayersForm extends Component {
     let playerOne = this.baseEl.find('#name1').val();
     let input2 = document.getElementById('name2');
     let playerTwo = this.baseEl.find('#name2').val();
-
 
     if (playerOne.length < 2 || playerOne.length > 10) {
       // Erase the class pattern pre-installed msg. And use the devs choice.

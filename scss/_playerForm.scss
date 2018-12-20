@@ -5,6 +5,7 @@ input {
 input:focus:invalid {
   border-color: red;
 }
+
 // created class so we can hide the invalid color until we focus the input field
 input.untouched {
   border-color: rgb(163, 163, 163);
