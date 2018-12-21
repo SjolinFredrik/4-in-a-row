@@ -1,11 +1,10 @@
 class Bot extends Component {
 
-  constructor (player1, player2) {
+  constructor (name, player1, player2) {
     super();
-    this.name = 'computer' + playerName;
-    this.color = color;
-    this.type = 'computer'
-    
-    }
+    this.name = 'computer' + name;
+    this.type = 'computer';
+    this.bot = new Bot;
+  }    
   }
   
