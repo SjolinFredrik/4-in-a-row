@@ -6,7 +6,7 @@ class NavBar extends Component {
       new NavItem('Start', '/'),
       new NavItem('Spela', '/play'),
       new NavItem('Spelregler', '/game-rules'),
-      new NavItem('Toplista', '/highscore')
+      new NavItem('Topplista', '/highscore')
     ];
     this.showingCancelButton = false;
     this.addEvents({
