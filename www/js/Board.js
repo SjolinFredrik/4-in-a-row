@@ -156,3 +156,6 @@ class Board extends Component {
     return false;
   }
 }
+
+//modal to show the winner
+theWinnerIs()
