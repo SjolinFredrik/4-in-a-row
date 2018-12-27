@@ -4,12 +4,11 @@ class Board extends Component {
     super();
     this.board = [];
     this.game = game;
-
     this.createBoard();
   }
 
-  createBoard() {
 
+  createBoard() {
     for (let row = 0; row < 6; row++) {
       let row = [];
       for (let col = 0; col < 7; col++) {
@@ -19,9 +18,9 @@ class Board extends Component {
     }
   }
 
+
   makeMove(col) {
     for (let row = 5; row >= 0; row--) {
-
       if (this.board[row][col].color === "") {
         this.board[row][col].color = this.game.currentPlayer.color;
         this.board[row][col].render();
@@ -33,6 +32,7 @@ class Board extends Component {
     }
     return false;
   }
+
 
   checkForWin() {
     let winnerColor;
@@ -82,7 +82,6 @@ class Board extends Component {
               won = false;
               continue;
             }
-
             won = won && this.board[row][col + i].color === color;
           }
           if (won) { return color; }
@@ -154,7 +153,6 @@ class Board extends Component {
         }
       }
     }
-
     return false;
   }
 }
