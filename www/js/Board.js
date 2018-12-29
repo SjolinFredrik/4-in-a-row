@@ -33,6 +33,21 @@ class Board extends Component {
     return false;
   }
 
+  //make a function for a bot
+  makeMoveBot() {
+    for (let row = 5; row >= 0; row--) {
+      if (this.board[row][col].color === "") {
+        this.board[row][col].color = this.game.currentPlayer.color;
+        this.board[row][col].render();
+        this.checkForWin();
+        this.checkForTie();
+        this.game.changePlayer();
+        break;
+      }
+    }
+    return false;
+  }
+
 
   checkForWin() {
     let winnerColor;
