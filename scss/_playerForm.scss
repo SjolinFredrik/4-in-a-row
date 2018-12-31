@@ -1,0 +1,17 @@
+input {
+  outline: none;
+}
+// shows red when u have an empty field 1 char and above 10 chars.
+input:focus:invalid {
+  border-color: red;
+}
+
+// created class so we can hide the invalid color until we focus the input field
+input.untouched {
+  border-color: rgb(163, 163, 163);
+  box-shadow: none;
+}
+
+input:valid {
+  border-color: rgb(15, 233, 80) !important;
+}
