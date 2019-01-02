@@ -4,13 +4,12 @@ class PlayersForm extends Component {
     super();
     this.addEvents({
       'change .untouched': 'changeColor',
-      'keydown input[type="text"]': 'resetValidity',
-      'click .radio-btn': 'chooseplayerType'
-
+      'keydown input[type="text"]': 'resetValidity'
     });
+}
 
   /*******************************VALIDATION OF INPUT NAMES*******************************/
-  }
+
   // This method is made cause otherwise setCustomValidity in the validateInputNames
   // things it's a permanent msg and won't get away even if you type in the right name
   resetValidity(){
@@ -22,7 +21,8 @@ class PlayersForm extends Component {
   changeColor(e) {
     $(e.target).removeClass('untouched')
   }
-  
+
+
   // method called upon at the GamePage.js
   // Here the validation starts.
   validateInputNames() {

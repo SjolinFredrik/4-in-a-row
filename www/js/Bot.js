@@ -4,7 +4,6 @@ class Bot extends Component {
     super();
     this.name = 'computer' + name;
     this.bot = new Bot;
-    //
     this.isHuman = false;
   }    
   }
