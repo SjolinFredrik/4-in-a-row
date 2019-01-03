@@ -4,12 +4,11 @@ class Board extends Component {
     super();
     this.board = [];
     this.game = game;
-
     this.createBoard();
   }
 
-  createBoard() {
 
+  createBoard() {
     for (let row = 0; row < 6; row++) {
       let row = [];
       for (let col = 0; col < 7; col++) {
@@ -19,13 +18,14 @@ class Board extends Component {
     }
   }
 
+
   makeMove(col) {
     for (let row = 5; row >= 0; row--) {
-
       if (this.board[row][col].color === "") {
         this.board[row][col].color = this.game.currentPlayer.color;
         this.board[row][col].render();
         this.checkForWin();
+        this.checkForTie();
         this.game.changePlayer();
         break;
       }
@@ -33,13 +33,29 @@ class Board extends Component {
     return false;
   }
 
+  //make a function for a bot
+  makeMoveBot() {
+    for (let row = 5; row >= 0; row--) {
+      if (this.board[row][col].color === "") {
+        this.board[row][col].color = this.game.currentPlayer.color;
+        this.board[row][col].render();
+        this.checkForWin();
+        this.checkForTie();
+        this.game.changePlayer();
+        break;
+      }
+    }
+    return false;
+  }
+
+
   checkForWin() {
     let winnerColor;
     if (this.checkVerticals() === 'yellow' || this.checkVerticals() === 'red') {
       winnerColor = this.checkVerticals();
       alert(winnerColor + ' wins');
 
-    } else if (this.checkHorizontals() === 'yellow' || this.checkVerticals() === 'red') {
+    } else if (this.checkHorizontals() === 'yellow' || this.checkHorizontals() === 'red') {
       winnerColor = this.checkHorizontals();
       alert(winnerColor + ' wins');
 
@@ -52,6 +68,21 @@ class Board extends Component {
       alert(winnerColor + ' wins');
     }
   }
+
+  //checking for a tie
+  checkForTie() {
+    let count = 0;
+    //looping through the columns in the last row, if they are full and there are no 4 in a row, it's a tie
+    for (let col = 0; col < 7; col++) {
+      if (this.board[0][col].color !== '') {
+        count = count + 1;
+      }
+    }
+    if (count === 7 && this.checkVerticals() === false && this.checkHorizontals() === false && this.checkDiagonalsBLtoTR() === false && this.checkDiagonalsTLtoBR() === false) {
+      alert("It's a tie");
+    }
+  }
+
 
   checkHorizontals() {
     let colors = ['red', 'yellow'];
@@ -66,7 +97,6 @@ class Board extends Component {
               won = false;
               continue;
             }
-
             won = won && this.board[row][col + i].color === color;
           }
           if (won) { return color; }
@@ -138,7 +168,6 @@ class Board extends Component {
         }
       }
     }
-
     return false;
   }
 }
