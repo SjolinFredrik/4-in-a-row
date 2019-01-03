@@ -5,6 +5,7 @@ class Board extends Component {
     this.board = [];
     this.game = game;
     this.createBoard();
+    this.gameWon = false;
   }
 
 
@@ -36,23 +37,38 @@ class Board extends Component {
 
   checkForWin() {
     let winnerColor;
+    this.gameWon =false;
     if (this.checkVerticals() === 'yellow' || this.checkVerticals() === 'red') {
       winnerColor = this.checkVerticals();
-      alert(winnerColor + ' wins');
+      this.gameWon = true;
+      this.theWinnerIs();
+      this.render();
 
     } else if (this.checkHorizontals() === 'yellow' || this.checkHorizontals() === 'red') {
       winnerColor = this.checkHorizontals();
-      alert(winnerColor + ' wins');
+      this.gameWon = true;
+      this.theWinnerIs();
+      this.render();
 
     } else if (this.checkDiagonalsBLtoTR() === 'yellow' || this.checkDiagonalsBLtoTR() === 'red') {
       winnerColor = this.checkDiagonalsBLtoTR();
-      alert(winnerColor + ' wins');
+      this.gameWon = true;
+      this.theWinnerIs();
+      this.render();
 
     } else if (this.checkDiagonalsTLtoBR() === 'yellow' || this.checkDiagonalsTLtoBR() === 'red') {
       winnerColor = this.checkDiagonalsTLtoBR();
-      alert(winnerColor + ' wins');
+      this.gameWon = true;
+      this.theWinnerIs();
+      this.render();
+    }      
     }
-  }
+  //   } else if (this.checkHorizontals() && this.checkVerticals() && this.checkDiagonalsBLtoTR() && this.checkDiagonalsTLtoBR() !== 'yellow' ){
+  //     this.game.modalHide();
+  //   }else if (this.checkHorizontals() && this.checkVerticals() && this.checkDiagonalsBLtoTR() && this.checkDiagonalsTLtoBR() !== 'red' ){
+  //     this.game.modalHide();
+  // }
+
 
   //checking for a tie
   checkForTie() {
@@ -156,11 +172,11 @@ class Board extends Component {
     return false;
   }
 
-
 //modal to show the winner
-theWinnerIs(){
-  
-  setTimeout(() => $('#modal').modal('show'), 0); 
-  console.log('modal show'); 
-}
+theWinnerIs() {
+  this.gameWon= true;
+  $('#modal').modal('show');
+   console.log('modal');
+     }
+
 }
