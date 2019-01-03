@@ -1,14 +1,22 @@
 class Board extends Component {
 
-  constructor(game) {
+  constructor(game, gamePage) {
     super();
     this.board = [];
     this.game = game;
+    this.gamePage = gamePage;
     this.createBoard();
     // this.modalHide();
     this.gameWon = false;
+    this.draw = false;
+    this.addEvents({
+      'click .restartButton': 'startGame'
+    });
   }
 
+startGame(){
+  this.gamePage.startGame();
+}
 
   createBoard() {
     for (let row = 0; row < 6; row++) {
@@ -97,7 +105,9 @@ class Board extends Component {
       }
     }
     if (count === 7 && this.checkVerticals() === false && this.checkHorizontals() === false && this.checkDiagonalsBLtoTR() === false && this.checkDiagonalsTLtoBR() === false) {
-      alert("It's a tie");
+     this.draw = true;
+     this.isDraw();
+     this.render();
     }
   }
 
@@ -201,5 +211,10 @@ theWinnerIs() {
  $('#modal').modal('show');
    console.log('modal');
      }
+
+isDraw(){
+  this.draw = true;
+  $('#draw-modal').modal('show');
+}
 
 }

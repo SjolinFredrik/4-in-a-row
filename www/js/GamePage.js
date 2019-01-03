@@ -5,7 +5,8 @@ class GamePage extends Component {
     this.addRoute('/play', 'Spela');
     this.playersForm = new PlayersForm();
     this.addEvents({
-      'click .start-game': 'startGame'
+      'click .start-game': 'startGame',
+      'click .restartButton': 'startGame'
     });
     Store.gamePage = this;
   }
