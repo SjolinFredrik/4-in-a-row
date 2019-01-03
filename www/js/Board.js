@@ -42,6 +42,7 @@ class Board extends Component {
     if (this.checkVerticals() === 'yellow' || this.checkVerticals() === 'red') {
       winnerColor = this.checkVerticals();
       this.gameWon = true;
+      
       this.theWinnerIs();
       this.render();
 
@@ -182,7 +183,7 @@ class Board extends Component {
 //modal to show the winner
 theWinnerIs() {
   this.gameWon= true;
-  $('#modal').modal('show');
+ $('#modal').modal('show');
    console.log('modal');
      }
 
