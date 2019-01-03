@@ -19,6 +19,9 @@ class Board extends Component {
     }
   }
 
+  //loop through all cells to find empty, 
+  //when empty and player chooses row find last empty cell 
+  //and fill with player color
   makeMove(col) {
     for (let row = 5; row >= 0; row--) {
 
@@ -33,6 +36,7 @@ class Board extends Component {
     return false;
   }
 
+  //to check for win create a variable for winner color, set winning conditions and alert result
   checkForWin() {
     let winnerColor;
     if (this.checkVerticals() === 'yellow' || this.checkVerticals() === 'red') {
@@ -52,7 +56,9 @@ class Board extends Component {
       alert(winnerColor + ' wins');
     }
   }
-
+//loop throgh all cells to find 4 in a row horizontal, vertical and diagonal up and down
+//loop through all colors aka the 2 players and then through all cells to find same 
+//color next to each other
   checkHorizontals() {
     let colors = ['red', 'yellow'];
     for (let color of colors) {
