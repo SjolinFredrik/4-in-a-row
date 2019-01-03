@@ -5,6 +5,7 @@ class Board extends Component {
     this.board = [];
     this.game = game;
     this.createBoard();
+    // this.modalHide();
     this.gameWon = false;
   }
 
@@ -172,6 +173,12 @@ class Board extends Component {
     return false;
   }
 
+  // modalHide(){
+  //   if(this.gameWon){
+  //     $('#modal').modal('hide');
+  //   }
+  //   this.render();
+  // }
 //modal to show the winner
 theWinnerIs() {
   this.gameWon= true;
