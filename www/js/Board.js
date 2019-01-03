@@ -34,20 +34,53 @@ class Board extends Component {
   }
 
   //make a function for a bot
-  makeMoveBot() {
+  makeMoveBot(col) {
     for (let row = 5; row >= 0; row--) {
-      if (this.board[row][col].color === "") {
+      if (this.board[row][col].color === " ") {
         this.board[row][col].color = this.game.currentPlayer.color;
         this.board[row][col].render();
-        this.checkForWin();
         this.checkForTie();
         this.game.changePlayer();
-        break;
+        this.game.pickPlayer();
+        this.currentPlayer.isNotHuman === true;
+        this.checkForWin();
+
+        if (this.checkType() === isNotHuman) {
+          if (this.winnerColor) {
+            return;
+          }
+          this.makeMoveBot(Math.floor(Math.random() * 7));
+        }
+        if (this.count + this.count === 42 && !this.winnerColor) {
+         // $('.draw-modal').modal('show');
+        }
+        return;
       }
     }
-    return false;
   }
 
+  checkType() {
+    if (this.currentPlayer === 0) {
+      return this.isNotHuman;
+    }
+    if (this.currentPlayer === 1) {
+      return this.isNotHuman;
+    }
+  }
+
+
+  checkIfTwoBots() {
+    if (this.player1.type === 'computer' && this.player2.type === 'computer') {
+      return true;
+    }
+  }
+
+  async runTwoBots() {
+    while (!this.winnerColor) {
+      this.makeMoveBot2(Math.floor(Math.random() * 7));
+      await this.sleep(1000);
+    }
+  }
 
   checkForWin() {
     let winnerColor;
@@ -137,7 +170,7 @@ class Board extends Component {
         for (let col = 0; col < 7; col++) {
           let won = true;
           for (let i = 0; i < 4; i++) {
-            if(row - i < 0 || col + i > 6){
+            if (row - i < 0 || col + i > 6) {
               won = false;
               continue;
             }
@@ -158,7 +191,7 @@ class Board extends Component {
         for (let col = 0; col < 7; col++) {
           let won = true;
           for (let i = 0; i < 4; i++) {
-            if(row + i > 5 || col + i > 6){
+            if (row + i > 5 || col + i > 6) {
               won = false;
               continue;
             }

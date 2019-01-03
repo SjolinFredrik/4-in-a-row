@@ -1,10 +1,15 @@
 class Bot extends Component {
-
   constructor (player1, player2) {
-    super();
-    this.name = 'computer' + name;
-    this.bot = new Bot;
-    this.isHuman = false;
+    this.name =  name;
+    this.color = color;
+   
+    
+   //setting default that the bot isNot human
+    //if bot - then false
+    this.isNotHuman = true;
   }    
   }
   
+ 
+
+

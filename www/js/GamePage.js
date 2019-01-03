@@ -5,38 +5,21 @@ class GamePage extends Component {
     this.addRoute('/play', 'Spela');
     this.playersForm = new PlayersForm();
     this.addEvents({
+      'click radio#computer': 'pickplayerType',
       'click .start-game': 'startGame',
-       
+
     });
     Store.gamePage = this;
-  
   }
 
-  /* playerType(){ 
-    let type= document.getElementByName('player1');
-    if(this.baseEl.find('player1').val() === 'computer'){
-    this.baseEl.find('#computer').val('AI 1')
-  }
-    let type2 = document.getElementsByName('player2';)
-    this.baseEl.find('player2').val() === 'computer;
-      let type2= document.getElementById('computer');
-      this.baseEl.find('#computer').val('AI2') === '#computer';   
-    }
-    */
-      
   // create a method to start the game with 2 players, and put them
   // into one array So Game.js can catch this object.
   startGame() {
     let player1 = new Player(this.baseEl.find('#name1').val(), 'red');
-    if (this.baseEl.find('playerOne').val() === 'computer'){
-      this.baseEl.find('#computer').val('AI 1');
     let player2 = new Player(this.baseEl.find('#name2').val(), 'yellow');
-    if (this.baseEl.find('playerTwo').val() === 'computer'){
-    this.baseEl.find('#computer').val('AI 2');
-    }
     // Calls on the method for the validation that's created
     // in the PlayersForm.js, when the validation is a succsess the game starts.
-    if (this.playersForm.validateInputNames()){
+    if (this.playersForm.validateInputNames()) {
       this.game = new Game([player1, player2]);
       //adding navbar to Store variable to temporarilly store navbar 
       Store.navbar.showingCancelButton = true;
@@ -44,9 +27,28 @@ class GamePage extends Component {
       this.render();
     }
   }
-}
 
-  unmount() {
-    delete this.game;
+  pickPlayerType(){
+    let msg = '';
+    if (document.name1.player1.value === '') {
+       document.name1.player1.focus();
+            document.getElementById('player1').style.color = "red";
+      alert("You have chosen bot player and fuck this");
+      result = true;
+      msg += " "+document.name1.player1.value;
+
+      if (msg === "") {
+          return result;
+      }
+      {
+        alert(msg)
+        return result;
+      }
+    }
   }
+    
+
+unmount(){
+  delete this.game;
+}
 }

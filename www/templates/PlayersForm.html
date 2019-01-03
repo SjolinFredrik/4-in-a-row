@@ -1,4 +1,4 @@
-<form>
+<form name="gameform" onClick="return pickPlayer()">
   <!--Player 1 input and choice of type-->
   <div>
     <h2 class="choose-playerOne col-md-4 mt-5 pb-3">Spelare 1</h2>
@@ -8,10 +8,10 @@
     </div>
   </div>
   <div class="bot human col-md-4 mt-5">
-    <div>Typ av spelare?</div>
-    <input class="radio-btn" type="radio" name="player1" id="human">
+    <div id="playerOption1">Typ av spelare?</div>
+    <input class="radio-btn" type="radio" checked name="player1" id="human">
     <label for="human">Människa</label>
-    <input class="radio-btn" type="radio" name="player1" id="computer">
+    <input class="radio-btn" type="radio" name="player1" id="computer1">
     <label for="computer">Dator</label>
   </div>
 
@@ -24,10 +24,10 @@
     </div>
   </div>
   <div class="bot human col-md-4 mt-5">
-    <div>Typ av spelare?</div>
-    <input class="radio-btn" type="radio" name="player2" id="human">
+    <div id="playerOption2">Typ av spelare?</div>
+    <input class="radio-btn" type="radio" checked name="player2" id="human">
     <label for="human">Människa</label>
-    <input class="radio-btn" type="radio" name="player2" id="computer">
+    <input class="radio-btn" type="radio" name="player2" id="computer2">
     <label for="computer">Dator</label>
   </div>
   <div>

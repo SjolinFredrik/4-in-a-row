@@ -4,16 +4,17 @@ class PlayersForm extends Component {
     super();
     this.addEvents({
       'change .untouched': 'changeColor',
-      'keydown input[type="text"]': 'resetValidity'
+      'keydown input[type="text"]': 'resetValidity',
     });
-}
-
+  }
+  
+  
   /*******************************VALIDATION OF INPUT NAMES*******************************/
 
   // This method is made cause otherwise setCustomValidity in the validateInputNames
   // things it's a permanent msg and won't get away even if you type in the right name
   resetValidity(){
-    this.baseEl.find('input[type="text"]').each(function(){
+    this.baseEl.find('input[type="text"]').each(function () {
       this.setCustomValidity('');
     });
   }
@@ -21,7 +22,6 @@ class PlayersForm extends Component {
   changeColor(e) {
     $(e.target).removeClass('untouched')
   }
-
 
   // method called upon at the GamePage.js
   // Here the validation starts.
@@ -49,3 +49,15 @@ class PlayersForm extends Component {
     return false;
   }
 }
+
+
+
+
+/* 
+ if (this.baseEl.find('.radio-btn').val() === '#computer') {
+      this.baseEl.find('#name1').val('AI');
+    }
+    if (this.baseEl.find('.radio-btn').val() === '#computer') {
+      this.baseEl.find('#name2').val('AI II');
+  }
+  */
