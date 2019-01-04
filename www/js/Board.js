@@ -1,17 +1,28 @@
 class Board extends Component {
 
-  constructor(game) {
+  constructor(game, gamePage) {
     super();
     this.board = [];
     this.game = game;
+    this.gamePage = gamePage;
     this.createBoard();
+    // this.modalHide();
+    this.gameWon = false;
+    this.draw = false;
+    this.addEvents({
+      'click .restartButton': 'startGame'
+    });
     this.count = 0;
     this.winnerColor = '';
     this.sleep = function sleep(ms) {
       return new Promise((resolve) => setTimeout(resolve, ms));
 
   }
+
+startGame(){
+  this.gamePage.startGame();
 }
+
   createBoard() {
     for (let row = 0; row < 6; row++) {
       let row = [];
@@ -22,7 +33,9 @@ class Board extends Component {
     }
   }
 
-
+  //loop through all cells to find empty, 
+  //when empty and player chooses row find last empty cell 
+  //and fill with player color
   makeMove(col) {
     for (let row = 5; row >= 0; row--) {
       if (this.board[row][col].color === "") {
@@ -61,38 +74,42 @@ class Board extends Component {
     }
   }
 
-  checkIfTwoBots() {
-    if (this.game.currentPlayer === this.game.isNotHuman && this.game.currentPlayer === this.game.isNotHuman) {
-      return true;
-    }
-  }
-
-   async runTwoBots() {
-    while (!this.winnerColor){
-      this.makeMoveBot(Math.floor(Math.random() * 7));
-      await this.sleep(1000);
-    }
-  }
-
+  //to check for win create a variable for winner color, set winning conditions and alert result
   checkForWin() {
     let winnerColor;
+    this.gameWon =false;
     if (this.checkVerticals() === 'yellow' || this.checkVerticals() === 'red') {
       winnerColor = this.checkVerticals();
-      alert(winnerColor + ' wins');
+      this.gameWon = true;
+      
+      this.theWinnerIs();
+      this.render();
 
     } else if (this.checkHorizontals() === 'yellow' || this.checkHorizontals() === 'red') {
       winnerColor = this.checkHorizontals();
-      alert(winnerColor + ' wins');
+      this.gameWon = true;
+      this.theWinnerIs();
+      this.render();
 
     } else if (this.checkDiagonalsBLtoTR() === 'yellow' || this.checkDiagonalsBLtoTR() === 'red') {
       winnerColor = this.checkDiagonalsBLtoTR();
-      alert(winnerColor + ' wins');
+      this.gameWon = true;
+      this.theWinnerIs();
+      this.render();
 
     } else if (this.checkDiagonalsTLtoBR() === 'yellow' || this.checkDiagonalsTLtoBR() === 'red') {
       winnerColor = this.checkDiagonalsTLtoBR();
-      alert(winnerColor + ' wins');
+      this.gameWon = true;
+      this.theWinnerIs();
+      this.render();
+    }      
     }
-  }
+  //   } else if (this.checkHorizontals() && this.checkVerticals() && this.checkDiagonalsBLtoTR() && this.checkDiagonalsTLtoBR() !== 'yellow' ){
+  //     this.game.modalHide();
+  //   }else if (this.checkHorizontals() && this.checkVerticals() && this.checkDiagonalsBLtoTR() && this.checkDiagonalsTLtoBR() !== 'red' ){
+  //     this.game.modalHide();
+  // }
+
 
   //checking for a tie
   checkForTie() {
@@ -104,11 +121,14 @@ class Board extends Component {
       }
     }
     if (count === 7 && this.checkVerticals() === false && this.checkHorizontals() === false && this.checkDiagonalsBLtoTR() === false && this.checkDiagonalsTLtoBR() === false) {
-      alert("It's a tie");
+     this.draw = true;
+     this.isDraw();
+     this.render();
     }
   }
-
-
+//loop throgh all cells to find 4 in a row horizontal, vertical and diagonal up and down
+//loop through all colors aka the 2 players and then through all cells to find same 
+//color next to each other
   checkHorizontals() {
     let colors = ['red', 'yellow'];
     for (let color of colors) {
@@ -195,4 +215,23 @@ class Board extends Component {
     }
     return false;
   }
+
+  // modalHide(){
+  //   if(this.gameWon){
+  //     $('#modal').modal('hide');
+  //   }
+  //   this.render();
+  // }
+//modal to show the winner
+theWinnerIs() {
+  this.gameWon= true;
+ $('#modal').modal('show');
+   console.log('modal');
+     }
+
+isDraw(){
+  this.draw = true;
+  $('#draw-modal').modal('show');
+}
+
 }

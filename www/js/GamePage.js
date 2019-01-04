@@ -6,7 +6,7 @@ class GamePage extends Component {
     this.playersForm = new PlayersForm();
     this.addEvents({
       'click .start-game': 'startGame',
-
+      'click .restartButton': 'startGame'
     });
     Store.gamePage = this;
   }
@@ -25,7 +25,7 @@ class GamePage extends Component {
       (this.baseEl.find('#p2type').val() === 'bot') ? (new Bot (this.baseEl.find('#name2').val(), 'yellow')) : (new Player('yellow'));
 
       this.game = new Game([player1, player2]);
-      console.log("This is almost working");
+    
       //adding navbar to Store variable to temporarilly store navbar 
       Store.navbar.showingCancelButton = true;
       Store.navbar.render();
