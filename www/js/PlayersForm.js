@@ -50,14 +50,3 @@ class PlayersForm extends Component {
   }
 }
 
-
-
-
-/* 
- if (this.baseEl.find('.radio-btn').val() === '#computer') {
-      this.baseEl.find('#name1').val('AI');
-    }
-    if (this.baseEl.find('.radio-btn').val() === '#computer') {
-      this.baseEl.find('#name2').val('AI II');
-  }
-  */

@@ -7,9 +7,9 @@ class Game extends Component {
     //this.currentPlayer = players[0];
     //this.showPlayer = this.currentPlayer.name;
     this.changePlayer();
-    this.pickPlayer();
+    this.checkPlayerType();
     this.board = new Board(this);
-
+  
   }
 
   changePlayer() {
@@ -17,11 +17,9 @@ class Game extends Component {
     this.showPlayer = this.currentPlayer.name;
     this.render();
   }
-  // method to pick player type for bot = isNotHuman
-  pickPlayer() {
-    this.currentPlayer = this.currentPlayer === this.isNotHuman ? true : false;
-    this.bot = this.isNotHuman;
-    // this.currentPlayer = this.currentPlayer === this.isHuman ? false : true;
+  // method to choose player type for bot = isNotHuman
+  checkPlayerType() {
+    this.currentPlayer.isNotHuman = this.currentPlayer.isNotHuman === this.players[0] ? this.players[1] : this.players[0];
     console.log("hey bot");
     this.render();
   }
