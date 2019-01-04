@@ -5,7 +5,7 @@ class Board extends Component {
     this.board = [];
     this.game = game;
     this.gamePage = gamePage;
-    this.playersForm = playersForm;
+   
     this.createBoard();
     // this.modalHide();
     this.gameWon = false;
