@@ -28,7 +28,9 @@ startGame(){
     }
   }
 
-
+  //loop through all cells to find empty, 
+  //when empty and player chooses row find last empty cell 
+  //and fill with player color
   makeMove(col) {
     for (let row = 5; row >= 0; row--) {
       if (this.board[row][col].color === "") {
@@ -58,7 +60,7 @@ startGame(){
     return false;
   }
 
-
+  //to check for win create a variable for winner color, set winning conditions and alert result
   checkForWin() {
     let winnerColor;
     this.gameWon =false;
@@ -110,8 +112,9 @@ startGame(){
      this.render();
     }
   }
-
-
+//loop throgh all cells to find 4 in a row horizontal, vertical and diagonal up and down
+//loop through all colors aka the 2 players and then through all cells to find same 
+//color next to each other
   checkHorizontals() {
     let colors = ['red', 'yellow'];
     for (let color of colors) {
