@@ -5,12 +5,13 @@ class Board extends Component {
     this.board = [];
     this.game = game;
     this.gamePage = gamePage;
+    this.playersForm = playersForm;
     this.createBoard();
     // this.modalHide();
     this.gameWon = false;
     this.draw = false;
     this.addEvents({
-      'click .restartButton': 'startGame'
+      'click .restart-button': 'startGame'
     });
   }
 
@@ -37,6 +38,9 @@ startGame(){
         this.board[row][col].color = this.game.currentPlayer.color;
         this.board[row][col].render();
         this.checkForWin();
+        if (this.gameWon === true){
+          break
+        };
         this.checkForTie();
         this.game.changePlayer();
         break;
