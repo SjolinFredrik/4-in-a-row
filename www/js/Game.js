@@ -17,10 +17,13 @@ class Game extends Component {
     this.showPlayer = this.currentPlayer.name;
     this.render();
   }
-  // method to check player type for bot = isNotHuman
+  // method to check playertype for bot = isNotHuman
   checkPlayerType() {
-    this.players[0] = this.players[0] === this.isNotHuman ? true : false;
-    console.log("hey bot");
-    this.render();
+    this.playerType = this.playerType === this.isNotHuman ? this.isNotHuman : this.currentPlayer;
+    this.isNotHuman = this.players;
+      console.log("hey bot");
+      this.render();
+
+    }
   }
-}
+

@@ -6,7 +6,7 @@ class GamePage extends Component {
     this.playersForm = new PlayersForm();
     this.addEvents({
       'click .start-game': 'startGame',
-      'click  .radio-btn': 'createPlayerOption'
+
     });
     Store.gamePage = this;
   }
@@ -15,12 +15,15 @@ class GamePage extends Component {
   // into one array So Game.js can catch this object.
 
   startGame() {
-    let player1 = (this.baseEl.find('#name1').val() === 'bot') ? (new Bot (this.baseEl.find('#name1').val(), 'red')) : (new Player('red'));
-    let player2 = (this.baseEl.find('#name2').val() === 'bot') ? (new Bot (this.baseEl.find('#name2').val(), 'yellow')) : (new Player('yellow'));
+    let player1 = new Player(this.baseEl.find('#name1').val(), 'red');
+    let player2 = new Player(this.baseEl.find('#name2').val(), 'yellow');
 
     // Calls on the method for the validation that's created
     // in the PlayersForm.js, when the validation is a succsess the game starts.
     if (this.playersForm.validateInputNames()) {
+      (this.baseEl.find('#p1type').val() === 'bot') ? (new Bot (this.baseEl.find('#name1').val(), 'red')) : (new Player('red'));
+      (this.baseEl.find('#p2type').val() === 'bot') ? (new Bot (this.baseEl.find('#name2').val(), 'yellow')) : (new Player('yellow'));
+
       this.game = new Game([player1, player2]);
       console.log("This is almost working");
       //adding navbar to Store variable to temporarilly store navbar 
@@ -28,16 +31,6 @@ class GamePage extends Component {
       Store.navbar.render();
       this.render();
       
-      /* this.createPlayerOption();
-      this.game.players = this.game.currentPlayer.name;
-      this.game.currentPlayer = this.game.players[0];
-      if (this.board.checkIfTwoBots()) {
-        this.board.runTwoBots();
-      }
-      else if (this.game.checkPlayerType() === this.game.isNotHuman) {
-        this.board.makeMoveBot(Math.floor(Math.random() * 7));
-      }
-    } */
   }
   }
   unmount() {

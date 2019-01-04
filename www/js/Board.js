@@ -7,9 +7,11 @@ class Board extends Component {
     this.createBoard();
     this.count = 0;
     this.winnerColor = '';
+    this.sleep = function sleep(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
 
   }
-
+}
   createBoard() {
     for (let row = 0; row < 6; row++) {
       let row = [];
@@ -49,10 +51,10 @@ class Board extends Component {
           if (this.winnerColor) {
             return;
           }
-          this.makeMoveBot(Math.floor(Math.random() * 5));
+          this.makeMoveBot(Math.floor(Math.random() * 7));
         }
-        if (this.count + this.count === 35 && !this.winnerColor) {
-          //$('.draw-modal').modal('show');
+        if (this.count + this.count === 42 && !this.winnerColor) {
+         // $('.draw-modal').modal('show');
         }
         return;
       }
@@ -67,7 +69,7 @@ class Board extends Component {
 
    async runTwoBots() {
     while (!this.winnerColor){
-      this.makeMove(Math.floor(Math.random() * 7));
+      this.makeMoveBot(Math.floor(Math.random() * 7));
       await this.sleep(1000);
     }
   }
