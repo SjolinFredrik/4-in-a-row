@@ -1,30 +1,10 @@
-<div class="container highscore">
-  <h1>Topplista</h1>
-  <!-- <form>
-    <div class="form-row" id="input">
-      <div class="col-auto">
-        <input type="text" name="input" placeholder="Ange ditt namn:" required pattern="[a-zA-ZåäöÅÄÖ]{2,10}" title="Använd endast 2-10 bokstäver"
-          id="name">
-        <input class="submit-btn btn-secondary" type="submit" value="Skickar">
-      </div>
-  </form> -->
-</div>
-<div class="row pt-5">
-    <div class="col" id="col1 name">#</div>
-  <div class="col" id="col1 name">Namn</div>
-  <div class="col" id="col2 moves">vann efter så här många drag</div>
-</div>
-<div class="row">
-  <div class="list-group" id="highscoreList" role="tablist">
-    <div class="row pt-5">
-      <ul>
-        <li>${this.highscoreItem}</li>
-      </ul>
-    </div>
-    <!-- <div class="row pt-5">
-      <li>${this.moves}</li>
-    </div> -->
-    <li></li>
-    <li></li>
+<div class=" highscore-page container m-5">
+  <h1 class="col-12">Topplista</h1>
+  <div class="row">
+    <h2 class="col">Plats</h2>
+    <h2 class="col">Namn</h2>
+    <h2 class="col">Antal drag</h2>
   </div>
-</div>
+  <div>
+    ${this.highscoreList}
+  </div>

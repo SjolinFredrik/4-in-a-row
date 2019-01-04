@@ -4,36 +4,41 @@ class HighscorePage extends Component {
   constructor() {
     super();
     this.addRoute('/highscore', 'topplista');
-    this.addEvents({
-      'click .submit-btn': 'submitBtn',
-      'keyup .input': 'addInputOnEnter'
-    });
-    this.highscoreList = new List(this);
-   // Store.highscoreList = this;
-    
-  }  
   
-    addWinner(){
-      console.log('hi');
-      let winnerName = this.baseEl.find('.input').val();
-      this.highscoreList.addWinner(winnerName);
-      this.update();
-      this.baseEl.find('.input').focus();
-    }
-  
-    addWinnerOnEnter(e){
-      if(e.which === 13){
-        this.addWinner();
-      }
-    }
-  
-    update(){
-      this.render();
-      // optional to save all data to json
-      JSON._save('highscore-data', {data: this});
-    }
-  
+    this.highscoreList = new HighscoreList(this);
+
   }
+  countPlayerMoves(){
+    for(i = 0; i < 21; i++){
+      count++
+    }
+  }
+
+  addListItem() {
+    console.log('hi');
+    let winnerName; 
+    let playerMoves = countPlayerMoves();
+
+    this.highscoreList.addListItem(winnerName, playerMoves);
+    this.update();
+   
+  }
+  
+  addHighscore(playerName, playerMoves){
+    this.highscoreList.addHighscore(playerName, playerMoves);
+    this.update();
+  }
+
+
+
+  update() {
+    console.log('hi');
+    //this.render();
+    // optional to save all data to json
+    JSON._save('highscore.json', { data: this });
+  }
+
+}
 
 
 
