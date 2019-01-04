@@ -6,6 +6,12 @@ class HighscoreList extends Component {
     this.items = [];
   }
 
+  countPlayerMoves(){
+    for(i = 0; i < 21; i++){
+      return count++;
+      
+    }
+  }
   addHighscore(winnerName, winnerMoves) {
 
     if (this.items.length < 10) {
@@ -27,29 +33,16 @@ class HighscoreList extends Component {
             this.items.splice(newIndex, 0, new Item(this, name, moves));
           }
         }
-
       }
 
       if (this.items.length > 10) {
-
         this.removeHighscore(lastInList);
-
       }
     }
-
   }
 
   removeHighscore(item) {
     this.items.splice(this.items.indexOf(item), 1);
     this.page.update();
-
   }
-
-  //   this.highscoreItems.push(new HighscoreItem(this, name));
-  // }
-
-  // removeHighscoreItem(highscoreItem){
-  //   this.highscoreItems.splice(this.highscoreItems.indexOf(highscoreItem), 1);
-  //   this.page.update();
-  // }
 }

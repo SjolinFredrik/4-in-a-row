@@ -15,10 +15,6 @@ class Board extends Component {
     });
   }
 
-startGame(){
-  this.gamePage.startGame();
-}
-
   createBoard() {
     for (let row = 0; row < 6; row++) {
       let row = [];
