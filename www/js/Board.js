@@ -1,15 +1,24 @@
 class Board extends Component {
 
-  constructor(game) {
+  constructor(game, gamePage) {
     super();
     this.board = [];
     this.game = game;
-
+    this.gamePage = gamePage;
     this.createBoard();
+    // this.modalHide();
+    this.gameWon = false;
+    this.draw = false;
+    this.addEvents({
+      'click .restartButton': 'startGame'
+    });
   }
 
-  createBoard() {
+startGame(){
+  this.gamePage.startGame();
+}
 
+  createBoard() {
     for (let row = 0; row < 6; row++) {
       let row = [];
       for (let col = 0; col < 7; col++) {
@@ -24,11 +33,26 @@ class Board extends Component {
   //and fill with player color
   makeMove(col) {
     for (let row = 5; row >= 0; row--) {
-
       if (this.board[row][col].color === "") {
         this.board[row][col].color = this.game.currentPlayer.color;
         this.board[row][col].render();
         this.checkForWin();
+        this.checkForTie();
+        this.game.changePlayer();
+        break;
+      }
+    }
+    return false;
+  }
+
+  //make a function for a bot
+  makeMoveBot() {
+    for (let row = 5; row >= 0; row--) {
+      if (this.board[row][col].color === "") {
+        this.board[row][col].color = this.game.currentPlayer.color;
+        this.board[row][col].render();
+        this.checkForWin();
+        this.checkForTie();
         this.game.changePlayer();
         break;
       }
@@ -39,21 +63,53 @@ class Board extends Component {
   //to check for win create a variable for winner color, set winning conditions and alert result
   checkForWin() {
     let winnerColor;
+    this.gameWon =false;
     if (this.checkVerticals() === 'yellow' || this.checkVerticals() === 'red') {
       winnerColor = this.checkVerticals();
-      alert(winnerColor + ' wins');
+      this.gameWon = true;
+      
+      this.theWinnerIs();
+      this.render();
 
-    } else if (this.checkHorizontals() === 'yellow' || this.checkVerticals() === 'red') {
+    } else if (this.checkHorizontals() === 'yellow' || this.checkHorizontals() === 'red') {
       winnerColor = this.checkHorizontals();
-      alert(winnerColor + ' wins');
+      this.gameWon = true;
+      this.theWinnerIs();
+      this.render();
 
     } else if (this.checkDiagonalsBLtoTR() === 'yellow' || this.checkDiagonalsBLtoTR() === 'red') {
       winnerColor = this.checkDiagonalsBLtoTR();
-      alert(winnerColor + ' wins');
+      this.gameWon = true;
+      this.theWinnerIs();
+      this.render();
 
     } else if (this.checkDiagonalsTLtoBR() === 'yellow' || this.checkDiagonalsTLtoBR() === 'red') {
       winnerColor = this.checkDiagonalsTLtoBR();
-      alert(winnerColor + ' wins');
+      this.gameWon = true;
+      this.theWinnerIs();
+      this.render();
+    }      
+    }
+  //   } else if (this.checkHorizontals() && this.checkVerticals() && this.checkDiagonalsBLtoTR() && this.checkDiagonalsTLtoBR() !== 'yellow' ){
+  //     this.game.modalHide();
+  //   }else if (this.checkHorizontals() && this.checkVerticals() && this.checkDiagonalsBLtoTR() && this.checkDiagonalsTLtoBR() !== 'red' ){
+  //     this.game.modalHide();
+  // }
+
+
+  //checking for a tie
+  checkForTie() {
+    let count = 0;
+    //looping through the columns in the last row, if they are full and there are no 4 in a row, it's a tie
+    for (let col = 0; col < 7; col++) {
+      if (this.board[0][col].color !== '') {
+        count = count + 1;
+      }
+    }
+    if (count === 7 && this.checkVerticals() === false && this.checkHorizontals() === false && this.checkDiagonalsBLtoTR() === false && this.checkDiagonalsTLtoBR() === false) {
+     this.draw = true;
+     this.isDraw();
+     this.render();
     }
   }
 //loop throgh all cells to find 4 in a row horizontal, vertical and diagonal up and down
@@ -72,7 +128,6 @@ class Board extends Component {
               won = false;
               continue;
             }
-
             won = won && this.board[row][col + i].color === color;
           }
           if (won) { return color; }
@@ -144,7 +199,25 @@ class Board extends Component {
         }
       }
     }
-
     return false;
   }
+
+  // modalHide(){
+  //   if(this.gameWon){
+  //     $('#modal').modal('hide');
+  //   }
+  //   this.render();
+  // }
+//modal to show the winner
+theWinnerIs() {
+  this.gameWon= true;
+ $('#modal').modal('show');
+   console.log('modal');
+     }
+
+isDraw(){
+  this.draw = true;
+  $('#draw-modal').modal('show');
+}
+
 }
