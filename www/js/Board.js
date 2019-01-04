@@ -1,6 +1,6 @@
 class Board extends Component {
 
-  constructor(game, gamePage, playersForm) {
+  constructor(game, gamePage) {
     super();
     this.board = [];
     this.game = game;
