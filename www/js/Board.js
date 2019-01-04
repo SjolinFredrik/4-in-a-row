@@ -11,7 +11,7 @@ class Board extends Component {
     this.gameWon = false;
     this.draw = false;
     this.addEvents({
-      'click .restartButton': 'startGame'
+      'click .restart-button': 'startGame'
     });
   }
 

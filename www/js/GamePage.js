@@ -3,12 +3,14 @@ class GamePage extends Component {
   constructor() {
     super();
     this.addRoute('/play', 'Spela');
+   
     this.playersForm = new PlayersForm();
     this.addEvents({
       'click .start-game': 'startGame',
-      'click .restartButton': 'startGame'
+      'click .restart-button': 'startGame'
     });
     Store.gamePage = this;
+    
   }
 
   // create a method to start the game with 2 players, and put them
