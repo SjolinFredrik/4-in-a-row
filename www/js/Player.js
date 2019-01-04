@@ -7,3 +7,4 @@ class Player extends Component {
 
   }
 }
+
