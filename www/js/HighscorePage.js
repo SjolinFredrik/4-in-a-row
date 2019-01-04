@@ -8,15 +8,11 @@ class HighscorePage extends Component {
     this.highscoreList = new HighscoreList(this);
 
   }
-  countPlayerMoves(){
-    for(i = 0; i < 21; i++){
-      count++
-    }
-  }
+  
 
   addListItem() {
     console.log('hi');
-    let winnerName; 
+    let winnerName =  this.game.currentPlayer.name; 
     let playerMoves = countPlayerMoves();
 
     this.highscoreList.addListItem(winnerName, playerMoves);
