@@ -11,21 +11,12 @@ class GamePage extends Component {
     Store.gamePage = this;
   }
   
-  //bot player 
-  createPlayerOption(){
-    if (this.baseEl.find('#name1').val() === 'bot') {
-      this.baseEl.find('#p1type').val();
-    }
-    if (this.baseEl.find('#name2').val() === 'bot') {
-      this.baseEl.find('#p2type').val()
-    }
-  }
   // create a method to start the game with 2 players, and put them
   // into one array So Game.js can catch this object.
 
   startGame() {
-    let player1 = (this.baseEl.find('#name1').val() === 'human') ? (new Player(this.baseEl.find('#name1').val(), 'red')) : (new Bot('red'));
-    let player2 = (this.baseEl.find('#name2').val() === 'human') ? (new Player(this.baseEl.find('#name2').val(), 'yellow')) : (new Bot('yellow'));
+    let player1 = (this.baseEl.find('#name1').val() === 'bot') ? (new Bot (this.baseEl.find('#name1').val(), 'red')) : (new Player('red'));
+    let player2 = (this.baseEl.find('#name2').val() === 'bot') ? (new Bot (this.baseEl.find('#name2').val(), 'yellow')) : (new Player('yellow'));
 
     // Calls on the method for the validation that's created
     // in the PlayersForm.js, when the validation is a succsess the game starts.
@@ -35,12 +26,11 @@ class GamePage extends Component {
       //adding navbar to Store variable to temporarilly store navbar 
       Store.navbar.showingCancelButton = true;
       Store.navbar.render();
-      this.createPlayerOption();
       this.render();
-      /* 
+      
+      /* this.createPlayerOption();
       this.game.players = this.game.currentPlayer.name;
       this.game.currentPlayer = this.game.players[0];
-      
       if (this.board.checkIfTwoBots()) {
         this.board.runTwoBots();
       }
