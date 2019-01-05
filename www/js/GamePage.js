@@ -21,10 +21,7 @@ class GamePage extends Component {
     // Calls on the method for the validation that's created
     // in the PlayersForm.js, when the validation is a succsess the game starts.
     if (this.playersForm.validateInputNames()) {
-      (this.baseEl.find('#p1type').val() === 'bot') ? (new Bot (this.baseEl.find('#name1').val(), 'red')) : (new Player('red'));
-      (this.baseEl.find('#p2type').val() === 'bot') ? (new Bot (this.baseEl.find('#name2').val(), 'yellow')) : (new Player('yellow'));
-
-      this.game = new Game([player1, player2]);
+     this.game = new Game([player1, player2]);
     
       //adding navbar to Store variable to temporarilly store navbar 
       Store.navbar.showingCancelButton = true;

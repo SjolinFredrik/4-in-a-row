@@ -9,15 +9,17 @@ class Board extends Component {
     // this.modalHide();
     this.gameWon = false;
     this.draw = false;
+    this.count = 0;
+    this.winnerColor = '';
     this.addEvents({
       'click .restartButton': 'startGame'
     });
-    this.count = 0;
-    this.winnerColor = '';
+
     this.sleep = function sleep(ms) {
       return new Promise((resolve) => setTimeout(resolve, ms));
 
   }
+}
 
 startGame(){
   this.gamePage.startGame();
@@ -54,13 +56,13 @@ startGame(){
   makeMoveBot(col) {
     for (let row = 5; row >= 0; row--) {
       if (this.board[row][col].color === "") {
-        this.board[row][col].color = this.game.currentPlayer.color;
+        this.board[row][col].color = this.game.playerType.color;
         this.board[row][col].render();
         this.game.changePlayer();
         this.checkForTie();
         this.checkForWin();
-        this.game.checkPlayerType();
-        if (this.game.checkPlayerType() === this.game.isNotHuman) {
+       this.game.checkPlayerType();
+       if (this.game.checkPlayerType() === this.game.playerType.color) {
           if (this.winnerColor) {
             return;
           }
@@ -75,7 +77,7 @@ startGame(){
   }
 
   //to check for win create a variable for winner color, set winning conditions and alert result
-  checkForWin() {
+  checkForWin(){
     let winnerColor;
     this.gameWon =false;
     if (this.checkVerticals() === 'yellow' || this.checkVerticals() === 'red') {
@@ -224,7 +226,7 @@ startGame(){
   // }
 //modal to show the winner
 theWinnerIs() {
-  this.gameWon= true;
+  this.gameWon = true;
  $('#modal').modal('show');
    console.log('modal');
      }
