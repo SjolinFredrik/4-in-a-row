@@ -56,13 +56,12 @@ startGame(){
   makeMoveBot(col) {
     for (let row = 5; row >= 0; row--) {
       if (this.board[row][col].color === "") {
-        this.board[row][col].color = this.game.playerType.color;
+        this.board[row][col].color = this.game.currentPlayer.color;
         this.board[row][col].render();
         this.game.changePlayer();
         this.checkForTie();
         this.checkForWin();
-       this.game.checkPlayerType();
-       if (this.game.checkPlayerType() === this.game.playerType.color) {
+       if (this.game.checkPlayerType() === this.game.isNotHuman) {
           if (this.winnerColor) {
             return;
           }
