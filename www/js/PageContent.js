@@ -7,13 +7,13 @@ class PageContent extends Component {
     this.highscorePage = new HighscorePage();
     this.missingPage = new MissingPage();
     this.rulePage = new RulePage();
-    //App.highscorePage = this.highscorePage;
+    
     this.loadHighscoreData();
 }
 
   async loadHighscoreData(){
     // optional, this is if we want to load data from a JSON file
-   JSON._classes(HighscorePage, HighscoreList, HighscoreItem);
+   JSON._classes(HighscorePage, HighscoreList);
    let response = await JSON._load('highscore.json');
    console.log(response);
    if(response === null){ return; }
