@@ -19,6 +19,12 @@ class HighscorePage extends Component {
     this.update();
    
   }
+  countPlayerMoves(){
+    for(i = 0; i < 21; i++){
+      return count++;
+      
+    }
+  }
   
   addHighscore(playerName, playerMoves){
     this.highscoreList.addHighscore(playerName, playerMoves);

@@ -6,12 +6,7 @@ class HighscoreList extends Component {
     this.items = [];
   }
 
-  countPlayerMoves(){
-    for(i = 0; i < 21; i++){
-      return count++;
-      
-    }
-  }
+  
   addHighscore(winnerName, winnerMoves) {
 
     if (this.items.length < 10) {

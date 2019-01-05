@@ -29,7 +29,6 @@ class GamePage extends Component {
       Store.navbar.render();
       this.render();
     }
-
   }
 
   unmount() {
