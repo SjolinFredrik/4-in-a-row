@@ -5,7 +5,7 @@ class PlayersForm extends Component {
     this.addEvents({
       'change .untouched': 'changeColor',
       'keydown input[type="text"]': 'resetValidity',
-      'click keydown input[type="radio"]': 'radioPlayerType',
+      //'click keydown input[type="radio"]': 'radioPlayerType',
     });
   }
   /*******************************VALIDATION OF INPUT NAMES*******************************/
@@ -47,8 +47,9 @@ class PlayersForm extends Component {
     }
     return false;
   }
+}
 
-radioPlayerType(e){
+/* radioPlayerType(e){
     // look for window.event in case event isn't passed in
     e = e || window.event;
     if (e.keyCode == 13) {
@@ -57,4 +58,5 @@ radioPlayerType(e){
   }
     return false;
   }
-}
+
+*/

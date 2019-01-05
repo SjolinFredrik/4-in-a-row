@@ -18,6 +18,7 @@ class Board extends Component {
       return new Promise((resolve) => setTimeout(resolve, ms));
 
   }
+}
 
 startGame(){
   this.gamePage.startGame();

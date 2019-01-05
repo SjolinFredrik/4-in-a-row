@@ -29,25 +29,17 @@ class Game extends Component {
   // method to check playertype for bot = isNotHuman
   checkPlayerType() {
     this.playerType = this.playerType === this.isNotHuman ? this.isNotHuman : this.currentPlayer;
-    this.isNotHuman = this.players;
+    this.isNotHuman = this.player1 && this.player2;
       console.log("hey bot");
       this.render();
 
     }
   }
 
-  changePlayer() {
-    this.currentPlayer = this.currentPlayer === this.players[0] ? this.players[1] : this.players[0];
-    this.showPlayer = this.currentPlayer.name;
-    this.render();
-  }
- 
-
-  // modalHide(){
+    // modalHide(){
   //   $('#modal').modal('hide');
   // }
 
   
 
 
-}
