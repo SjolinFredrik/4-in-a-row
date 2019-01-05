@@ -1,8 +1,8 @@
 class HighscoreItem extends Component {
 
-  constructor(list, name, moves) {
+  constructor(highscoreList, name, moves) {
     super();
-    this.list = list;
+    this.highscoreList = highscoreList;
     this.name = name;
     this.moves = moves;
     
