@@ -31,7 +31,7 @@ class PlayersForm extends Component {
     let playerTwo = this.baseEl.find('#name2').val();
 
     if (playerOne.length < 2 || playerOne.length > 10) {
-      // Erase the class pattern pre-installed msg. And use the devs choice.
+      // Erase the input fields pre-installed msg. And use the devs choice.
       input.oninvalid = function (event) {
         event.target.setCustomValidity('Du får bara använda 2-10 bokstäver!');
       }
@@ -41,6 +41,7 @@ class PlayersForm extends Component {
         event.target.setCustomValidity('Du får bara använda 2-10 bokstäver!');
       }
     }
+    // if both input fields are correctly written it will return true and the game will start after the button click.
     if ((playerOne.length > 1 && playerOne.length < 11) && (playerTwo.length > 1 && playerTwo.length < 11)) {
       return true;
     }
