@@ -26,7 +26,7 @@ class Game extends Component {
   // method to check playertype for bot = isNotHuman
   checkPlayerType() {
     this.playerType = this.playerType === this.isNotHuman ? this.isNotHuman : this.currentPlayer;
-    this.isNotHuman = this.players;
+    //this.isNotHuman = this.players;
       console.log("hey bot");
       this.render();
 
