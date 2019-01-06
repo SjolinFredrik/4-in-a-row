@@ -26,80 +26,98 @@ h2, h4{
   color: #FF7400;
   font-weight: 200;
 }
+.welcome{
+  margin: 0 auto;
+
+}
+
 
 .startpage-btn{
   font-size: 1.5rem !important;
   font-weight: 200;
-  width: 100%;
   }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 560px)
-  and (-webkit-min-device-pixel-ratio: 2) {
+
+  @media (min-width: 320px){
    p.welcome-text{
       font-size: 14px;
-      line-height: 1.6;
+      line-height: 1.4;
       }
     .aside{
      padding-left: 0 !important;
+     height: auto;
+     flex: 100%;
     }
  }
 
-@media only screen and (min-device-width: 560px) and (max-device-width: 720px)
-  and (-webkit-min-device-pixel-ratio: 2) {
+ @media (min-width: 768px) { 
     p.welcome-text{
-      font-size: 17px;
       font-weight: 200;
     }
     .aside {
       padding-left: 0 !important;
-      
+      margin-top: 10px;
+      flex: 100%;
     }
     .startpage-btn{
-      font-size: 1.5rem !important;
+      font-size: 1.3rem !important;
       margin-top: 5px !important;
 
     }
     }
-  
-
-@media only screen and (min-device-width: 720px) and (max-device-width: 960px) 
-and (-webkit-min-device-pixel-ratio: 2){
+  @media (min-width: 992px){
   p.welcome-text{
     margin: 10px 0 0 0;
-    padding: 10px 0;
-    font-size: 20px;
+    padding: 5px 0;
+    font-size: 17px;
   }
   .aside {
+    margin-top: 30px;
     padding-left: 0 !important;
-    padding-top: 15px !important;
+    padding: 10px;
+    .card-img{
+      width: 110%;
+      height: auto;
+      }
+
   }
   .startpage-btn{
-    width: 95%;
-    font-size: 2rem;
-    padding-top: 10px;
+    width: 90%;
+    font-size: 1rem;
+  
   }
 }
 
-@media screen and (min-device-width: 1024px) and (max-device-width: 1600px) 
+@media screen and (min-device-width: 1024px)
   and (-webkit-min-device-pixel-ratio: 1) { 
     h4{
       margin-left: 10px !important;
     }
     p.welcome-text{
-      font-size: 28px;
+      font-size: 22px;
       line-height: 1.6 !important;
       font-weight: 200;
-      margin-bottom: 50px !important;
+      margin-bottom: 30px !important;
     }  
     .aside{
       padding-left: 0 !important;
-      padding-top: 10px;
+      padding-top: 5px;
 
     }
     .startpage-btn{
-     padding-top: 10px;
       width: 100%
     }
+    }
+
+    @media screen and (max-device-width: 1280px)
+    and (-webkit-min-device-pixel-ratio: 1){
+      p.welcome-text{
+        font-size: 25px;
+        margin-bottom: 50px !important;
+      }
+      .aside{
+        padding-top: 10px;
+      }
     }
  
 .card-link{

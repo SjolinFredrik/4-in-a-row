@@ -15,11 +15,6 @@ class Board extends Component {
     this.addEvents({
       'click .restart-button': 'startGame'
     });
-
-    this.sleep = function sleep(ms) {
-      return new Promise((resolve) => setTimeout(resolve, ms));
-
-  }
 }
 
   createBoard() {

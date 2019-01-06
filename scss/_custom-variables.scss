@@ -7,6 +7,9 @@ $gray-light: #d2dae2;
 $gray-dark: #808e9b;
 $gray-darkest: #485460;
 
+$grid-columns:                12 !default;
+$grid-gutter-width:           20px !important;
+
 // breakpoints // @mediaqueries 
 /* $grid-breakpoints: (
   xs: 0,
