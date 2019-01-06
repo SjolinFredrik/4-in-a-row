@@ -1,11 +1,12 @@
-body > div {
+body{
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  font-size: 17px;
 
   @font-face{
     font-family: 'Ailerons'; 
-    src: url('/www/fonts/Ailerons-Regular.otf'), sans-serif;
+    src: url('/fonts/Ailerons-Regular.otf'), sans-serif;
   }
 }
 
@@ -16,22 +17,97 @@ main {
 h2, h4{
   @font-face {
     font-family: 'ONEDAY', sans-serif;;
-    src: url('/www/fonts/ONEDAY.ttf');
+    src: url('/fonts/ONEDAY.ttf');
   }
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #FF7400;
-  font-weight: 300;
- 
+  font-weight: 200;
 }
 
+.startpage-btn{
+  width: 100%;
+  margin-top: 20px;
+  }
 
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+ .welcome{
+      padding: 5px;
+      margin: 5px;
+    }
+    p.welcome-text{
+      font-size: 14px;
+      line-height: 1.5;
+      text-align: left;
+    }
+    .aside{
+      padding: 3px;
+      margin: 3px;
+    }
+}
 
-@media (max-width: 991.98px) {
-  .paddingl {
+@media only screen and (min-device-width: 758px) and (max-device-width: 880px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    p.welcome-text{
+      font-size: 18px;
+      font-weight: 200;
+    }
+    .aside {
+      padding-left: 0 !important;
+      margin: 12px 0;
+    }
+    .startpage-btn{
+      padding-top: 5px;
+    }
+    }
+  
+
+@media only screen and (min-device-width: 880px) and (max-device-width: 998px) 
+and (-webkit-min-device-pixel-ratio: 2){
+  .aside {
     padding-left: 0 !important;
+    padding-top: 10px;
+  
+  }
+  p.welcome-text{
+    margin: 10px 0px;
+    padding: 10px 0px;
+    font-size: 25px;
+  }
+  .startpage-btn{
+    width: 100%;
+
   }
 }
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
 
-.btn{
-  width: 100%;
 }
+@media screen and (min-device-width: 998px) and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    h4{
+      margin-left: 10px !important;
+    }
+    .aside{
+      padding-left: 0 !important;
+      padding-top: 10px;
+
+    }
+    .welcome{
+      padding: 12px 5px;
+      margin: 5px 5px;
+    }
+    .welcome-text{
+      font-size: 28px;
+      line-height: 1.6 !important;
+      font-weight: 200;
+      margin-bottom: 45px !important;
+    }
+   
+}
+
+
+  
