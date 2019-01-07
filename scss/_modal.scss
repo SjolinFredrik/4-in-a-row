@@ -25,8 +25,8 @@
   background-position: center;
   background-size: cover;
   width: 100%;
-  opacity: 0.8;
-  filter: alpha(opacity = 80);
+  opacity: 0.7;
+
   .modal-header{
       border: none;
 
@@ -36,7 +36,8 @@
           font-size: 50px;
           text-align: center;
           margin-top: 60px;
-          color: #ffd32a;
+          color: #ff4a2a;
+          
       }
   }
 }
