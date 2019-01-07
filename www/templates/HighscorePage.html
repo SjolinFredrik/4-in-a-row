@@ -1,9 +1,39 @@
 <div class=" highscore-page container">
-  <h1 class="col-12">Topplista</h1>
+  <h1 class="highscorelist-heading col-12">Topplista</h1>
+  <form id="winnerform">
+    <div>
+      <h2 class="you-won">Du vann!!!</h2>
+      <div>
+        <input name="name" type="text" id="input" size="23 col-md-5 mt-4 mb-5" placeholder="Skriv ditt namn här:" required pattern="[a-zA-ZåäöÅÄÖ]{2,10}"
+          title="Använd endast 2-10 bokstäver" id="name" class="untouched">
+      </div>
+    </div>
+    <div>
+      <button class="submit btn btn-success submit-button col-md-5 mt-4 mb-3 py-3 px-2">Skickar!</button>
+    </div>
+  </form>
   <div class="row mt-4 pt-2">
-    <h4 class="col-4 pl-5">Rank</h4>
-    <h4 class="col-4">Namn</h4>
-    <h4 class="col-4 pr-5">Drag</h4>
+    <!-- <div class="th"></div> -->
+    <h4 class="col pl-5">Rank</h4>
+    <h4 class="col">Namn</h4>
+    <!-- <h4 class="col-4 pr-5">Drag</h4> -->
   </div>
-  ${this.highscoreList}
+
+<div class="row">
+  <div class="col pl-5 ml-5" id="col1">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+  </div>
+  <div class="col" id="col2">
+    <li>${this.input}</li>
+  </div>
+</div>
 </div>

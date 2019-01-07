@@ -1,18 +1,13 @@
 class HighscoreList extends Component {
 
-  constructor(page, name, moves) {
+  constructor(page, name, moves, input) {
     super();
     this.highscoreList = [];
     this.name = name;
     this.moves = moves;
     this.page = page;
+    this.input = input;
     this.update();
-  }
-
-  addToHighscoreList(highscoreList) {
-    highscoreList.push(highscore);
-    
-    update();
   }
 
 

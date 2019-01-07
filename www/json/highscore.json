@@ -1,9 +1,5 @@
 {
   "data": {
-    "highscoreList": [],
-    "page": {
-      "route": "/highscore",
-      "title": "topplista"
-    }
+    "highscoreList": []
   }
 }
