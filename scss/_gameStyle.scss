@@ -43,16 +43,6 @@
 }
 
 
-
-
-// .cell > div > div.red {
-//    background-color: red;
-//  }
-
-//  .cell > div > div.yellow {
-//    background-color: yellow;
-//  }
-
  .cell > div > div.yellow {
   background-image:url('/images/yellowm.png');
   background-size: cover;
@@ -81,5 +71,9 @@
  }
  }
 
+ .current-player{
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+ }
 
  
