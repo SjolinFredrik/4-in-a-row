@@ -5,7 +5,6 @@ class PlayersForm extends Component {
     this.addEvents({
       'change .untouched': 'changeColor',
       'keydown input[type="text"]': 'resetValidity',
-      //'click keydown input[type="radio"]': 'radioPlayerType',
     });
   }
   /*******************************VALIDATION OF INPUT NAMES*******************************/

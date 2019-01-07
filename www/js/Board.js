@@ -10,8 +10,8 @@ class Board extends Component {
     // this.modalHide();
     this.gameWon = false;
     this.draw = false;
-    this.count = 0;
-    this.winnerColor = '';
+    //this.count = 0;
+    //this.winnerColor = '';
     this.addEvents({
       'click .restart-button': 'startGame'
     });
@@ -48,7 +48,7 @@ class Board extends Component {
   }
 
   //make a function for a bot
-  makeMoveBot(col) {
+  /* makeMoveBot(col) {
     for (let row = 5; row >= 0; row--) {
       if (this.board[row][col].color === "") {
         this.board[row][col].color = this.game.currentPlayer.color;
@@ -68,7 +68,7 @@ class Board extends Component {
         return;
       }
     }
-  }
+  }*/
 
   //to check for win create a variable for winner color, set winning conditions and alert result
   checkForWin(){

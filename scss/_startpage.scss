@@ -21,7 +21,7 @@ h3{
   font-family: 'ONEDAY', sans-serif;;
     src: url('/fonts/ONEDAY.ttf');
     font-size: 2.5rem;
-    color: #d4d730;
+    color: $secondary-color;
     font-weight: 200;
 }
 
@@ -35,15 +35,14 @@ h2, h4{
   font-weight: 200;
 }
 .welcome{
-  padding-top: 10px;
   margin: 0 auto;
   width: 100%;
   height: auto;
 
 }
-.aside{
-  padding-top: 20px;
+aside{
   width: 100%;
+  display: flex;
   height: auto;
 }
 
@@ -90,6 +89,7 @@ h2, h4{
     font-size: 20px;
   }
   .card-img {
+   // margin-top: 30px !important;
     padding-left: 0 !important;
     width: 100%;
     height: auto;

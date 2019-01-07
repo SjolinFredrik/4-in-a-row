@@ -7,7 +7,6 @@ class Game extends Component {
     //this.currentPlayer = players[0];
     //this.showPlayer = this.currentPlayer.name;
     this.changePlayer();
-    
     //this.modalHide();
     //this.theWinnerIs();
     this.board = new Board(this);
@@ -23,15 +22,6 @@ class Game extends Component {
     this.showPlayer = this.currentPlayer.name;
     this.render();
   }
-  // method to check playertype for bot = isNotHuman
-  checkPlayerType() {
-    this.playerType = this.playerType === this.isNotHuman ? this.isNotHuman : this.currentPlayer;
-      console.log("hey bot");
-      this.render();
-
     }
-  }
 
-  // modalHide(){
-  //   $('#modal').modal('hide');
-  // }
+

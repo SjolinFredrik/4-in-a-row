@@ -3,8 +3,8 @@ footer{
     color: rgb(15, 15, 15);
     padding: 10px;
     font-size: 16px;
-
-    p{
+    width: 100%;
+ p{
     @font-face {
         font-family: 'ONEDAY', sans-serif;;
         src: url('/www/fonts/ONEDAY.ttf');
@@ -13,5 +13,5 @@ footer{
 }
 i {
   font-size: 30px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
