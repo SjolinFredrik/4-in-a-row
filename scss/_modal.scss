@@ -1,11 +1,12 @@
 #modal {
-  margin: auto;
+  margin: auto 0;
   width: 50%;
   top: 25%;
   left: 25%;
   padding: 10px;
   text-align: center;
   position: absolute;
+  
 }
 
 #draw-modal {
@@ -24,17 +25,18 @@
   background-position: center;
   background-size: cover;
   width: 100%;
-
+  opacity: 0.8;
+  filter: alpha(opacity = 80);
   .modal-header{
       border: none;
 
 
       .modal-title{
+          width: 100%;
           font-size: 50px;
           text-align: center;
-          width: 100%;
           margin-top: 60px;
-          background:white;
+          color: #ffd32a;
       }
   }
 }

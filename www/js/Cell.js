@@ -13,7 +13,7 @@ class Cell extends Component {
 
   click(e) {
     this.game.board.makeMove(this.col);
-    this.game.board.makeMoveBot(this.col);
+    //this.game.board.makeMoveBot(this.col);
    }
 
 }
