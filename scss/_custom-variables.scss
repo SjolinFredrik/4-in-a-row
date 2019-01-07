@@ -6,9 +6,15 @@ $fourth-color: #3e4ef0;
 $gray-light: #d2dae2;
 $gray-dark: #808e9b;
 $gray-darkest: #485460;
-
+$yellow: #ffd32a !important;
+$highligher: #ef5777 !important;
 $grid-columns:                12 !default;
 $grid-gutter-width:           20px !important;
+
+$warning:       $yellow;
+$highlight:     $highligher;
+
+$bg-light: #d2dae2;
 
 // breakpoints // @mediaqueries 
 /* $grid-breakpoints: (

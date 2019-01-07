@@ -1,3 +1,26 @@
+.highscore{
+  width: 100%;
+  margin: auto 0;
+  height: auto;
+  .list-head{
+    border: 3px solid #4bcffa;
+  }
+}
+
+
 li {
   list-style-type: none;
 }
+  .fireball{
+    width: 20%;
+    float: right;
+    height: auto;
+    position: relative;
+  }
+
+  h5{
+    font-family: 'Lato', sans-serif;
+    font-weight: 200;
+    font-size: 30px;    
+    color: #ff5e57;
+  }
