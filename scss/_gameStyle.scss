@@ -72,8 +72,14 @@
  }
 
  .current-player{
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  
+   @font-face {
+     font-family: 'ONEDAY', sans-serif;
+     src: url(fonts/ONEDAY.ttf);
+   }
+   .player-name{
+     text-transform: uppercase;
+     font-size: 18px;
+   }
  }
 
  
