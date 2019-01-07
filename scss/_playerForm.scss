@@ -25,12 +25,13 @@ input.untouched {
 input:valid {
   border-color: rgb(15, 233, 80);
 }
-
+@media (min-width: 320px){
 .images-form{
+    display: none;
     width: 100%;
     height: auto;
     margin: auto 0;
-}
+
   .mario{
     float: left;
     width: 60%;
@@ -47,4 +48,4 @@ input:valid {
   padding-left: 0 !important;
 }
 }
-
+}
