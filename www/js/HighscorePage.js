@@ -9,8 +9,7 @@ class HighscorePage extends Component {
       'click submit': 'submitButton'
     });
 
-    this.highscoreList = new HighscoreList;
-    this.addToHighscoreList();
+    this.list = [];
 
   }
 
@@ -18,9 +17,10 @@ class HighscorePage extends Component {
     let highscoreList = [];
     //let input = "winnerform";
     let input = document.getElementById("input");
-    console.log('<li>' + input + '</li>');
+    let winner = (this.baseEl.find('#input').val());
+    console.log('<li>' + winner + '</li>');
 
-    $(highscoreList).push("name").val;
+    $(highscoreList).push("#input").val;
   }
 
 //TO DO:

@@ -4,6 +4,7 @@ class Player extends Component {
     super();
     this.name = name;
     this.color = color;
+    this.moveNumber = 1;
 
     //setting default that the player is human
     //if bot - then false
