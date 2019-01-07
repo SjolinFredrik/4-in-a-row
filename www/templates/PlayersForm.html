@@ -1,0 +1,49 @@
+<form>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+          <div class="images-form">
+            <img src="/images/mario.png" class="mario" alt="mario">
+            <img src="/images/luigiFlyin.png" class="mario" alt="Mario Flyin'">
+      </div>
+    </div>
+      <div class="col-md-4">
+        <!--Player 1 input and choice of type-->
+        <h2 class="choose-playerOne mt-3 pb-4">Spelare 1</h2>
+        <div>
+        <input type="text" name="player1" placeholder="Ange namn:" required pattern="[a-zA-ZåäöÅÄÖ]{2,10}" title="Använd endast 2-10 bokstäver"
+        id="name1" class="untouched">
+        </div>
+      <div class="bot human mt-4">
+        <div>Typ av spelare?</div>
+        <input type="radio" checked name="player1" id="human">
+        <label for="human">Människa</label>
+        <input type="radio" name="player1" id="computer1">
+        <label for="bot">Dator</label>
+      </div>
+    <!--Player 2 input and choice of type-->
+    <div class="container">
+      <h2 class="choose-playerOne mt-3 pb-4">Spelare 2</h2>
+      <div>
+        <input type="text" name="player2" placeholder="Ange namn:" required pattern="[a-zA-ZåäöÅÄÖ]{2,10}" title="Använd endast 2-10 bokstäver"
+          id="name2" class="untouched">
+      </div>
+    <div class="bot human mt-4 pb-4">
+      <div>Typ av spelare?</div>
+      <input type="radio" checked name="player2" id="human">
+      <label for="human">Människa</label>
+      <input type="radio" name="player2" id="computer2">
+      <label for="bot">Dator</label>
+    </div>
+    <input type="submit" value="Börja spela!" class="btn btn-warning start-game link-button text-light mt-4 mb-5">
+  </div>
+  </div>
+  <div class="col-md-4">
+      <div class="images-form">
+    <img src="/images/luigi.png" class="luigi" alt="luigi">
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+</form>

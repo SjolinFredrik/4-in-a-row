@@ -1,0 +1,137 @@
+body{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-size: 18px;
+  text-align: left;
+
+  @font-face{
+    font-family: 'Ailerons'; 
+    src: url('/fonts/Ailerons-Regular.otf'), sans-serif;
+  }
+}
+p{
+  font-weight: 200;
+}
+main {
+  flex: 1;
+}
+
+h3{
+  font-family: 'ONEDAY', sans-serif;;
+    src: url('/fonts/ONEDAY.ttf');
+    font-size: 2.5rem;
+    color: $secondary-color;
+    font-weight: 200;
+}
+
+h2, h4{
+  @font-face {
+    font-family: 'ONEDAY', sans-serif;;
+    src: url('/fonts/ONEDAY.ttf');
+  }
+  font-size: 3.5rem;
+  color: $primary-color;
+  font-weight: 200;
+}
+.welcome{
+  width: 100%;
+  height: auto;
+  margin: auto 0;
+}
+
+.aside{
+  width: 100%;
+  height: auto;
+}
+
+.startpage-btn{
+  font-size: 1.5rem !important;
+  font-weight: 200;
+  width: 100%;
+  }
+
+
+  @media (min-width: 320px){
+   p.welcome-text{
+      font-size: 14px;
+      line-height: 1.4;
+      }
+    .aside.card-img{
+     padding-left: 0 !important;
+     width: 25%;
+     
+    }
+ }
+
+ @media (min-width: 768px) { 
+  p.welcome-text{
+    margin-top: 10px;
+  }
+    .aside {
+      padding-left: 0 !important;
+      .card-img{
+        width: 100%;
+        height: auto;
+        }
+    }
+    .startpage-btn{
+      font-size: 1.2rem !important;
+      margin-top: 5px !important;
+
+    }
+    }
+  @media (min-width: 992px){
+  p.welcome-text{
+    margin-top: 10px;
+    padding: 5px 0px;
+    font-size: 20px;
+  }
+  .card-img {
+   // margin-top: 30px !important;
+    padding-left: 0 !important;
+    width: 100%;
+    height: auto;
+    }
+  
+  .startpage-btn{
+    font-size: 1rem;
+  }
+  }
+
+
+@media screen and (min-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    h4{
+      margin-left: 10px !important;
+    }
+    p.welcome-text{
+      font-size: 22px;
+      line-height: 1.4 !important;
+      font-weight: 200;
+      margin-bottom: 10px !important;
+    }  
+    .aside{
+      padding-left: 0 !important;
+
+    }
+    }
+
+    @media screen and (max-device-width: 1280px)
+    and (-webkit-min-device-pixel-ratio: 1){
+      p.welcome-text{
+        font-size: 25px;
+        margin-bottom: 50px !important;
+         
+      }
+    }
+ 
+.card-link, .card-title{
+ color: #3e4ef0;
+ font-size: 20px;
+}
+
+
+
+
+  
