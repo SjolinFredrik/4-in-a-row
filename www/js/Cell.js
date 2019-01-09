@@ -12,7 +12,7 @@ class Cell extends Component {
   }
 
   click(e) {
-     if(this.game.currentPlayer.type === 'human') {
+    // this.game.currentPlayer.type === 'human') 
       this.game.board.makeMove(this.col);
    //  } else  {
       // this.game.board.makeMoveBot();
@@ -20,4 +20,3 @@ class Cell extends Component {
      }
 
   }
-}

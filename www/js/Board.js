@@ -5,9 +5,12 @@ class Board extends Component {
     this.game = game;
     this.gamePage = gamePage;
     this.createBoard();
+    this.makeMoveBot();
     // this.modalHide();
     this.gameWon = false;
     this.draw = false;
+    this.bot = false;
+    
     //this.count = 0;
     //this.winnerColor = '';
    
@@ -36,7 +39,7 @@ class Board extends Component {
         };
         this.checkForTie();
         this.game.changePlayer();
-        if(this.game.currentPlayer.type === 'computer'){
+       if(this.game.currentPlayer.type === 'computer'){
         this.makeMoveBot();}
         break;
       }
@@ -46,14 +49,18 @@ class Board extends Component {
 
   
   makeMoveBot() {
-   
+    
     setTimeout(() => {
       let emptyCell = true;
       while (emptyCell) {
-
+       
         let randomCol = Math.floor(Math.random() * 7);
         for (let row = 5; row >= 0; row--) {
           if (this.board[row][randomCol].color === "") {
+            if(this.game.currentPlayer.type === 'human'){
+              this.makeMove();}
+            else if(this.game.currentPlayer.type === 'computer'){
+              
             this.board[row][randomCol].color = this.game.currentPlayer.color;
              emptyCell = false;
             this.board[row][randomCol].render();
@@ -64,14 +71,16 @@ class Board extends Component {
             this.checkForTie();
 
             this.game.changePlayer();
+           
             break;
             // Math.floor(Math.random() * 7);
           }
         }
       }
-    
+      }    
     }, 1000)
-}
+
+  }
 //make a function for a bot
 // makeMoveBot(col) {
 //   for (let row = 5; row >= 0; row--) {
