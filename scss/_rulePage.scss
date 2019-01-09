@@ -1,5 +1,4 @@
 .rpbutton {
-  background-color: #ffc107;
   font-size: 16px;
   color: white;
   border-radius: 5px;
@@ -7,30 +6,32 @@
   padding-top: 13px;
 }
 
-.game-rules .card-text {
+
+.about-text .card-text {
   line-height: 1.5;
 }
 
-.card-img-rules {
-  padding-top: 65px;
-}
 
 .card-title {
-  text-align: center;
+  text-align: left;
 }
   .shroom{
     width: 20%;
     float: right;
     height: auto;
   }
-  .coins{
-    width: 40%;
+  .shroom-img {
+    width: 26%;
     height: auto;
-    float: right;
+    float: left;
   }
   
 .card{
   border: 2px solid #ffd32a;
+}
+
+.card-img-rules {
+  width: 101%;
 }
 
 
