@@ -226,7 +226,7 @@ class Board extends Component {
   //modal to show the winner
   theWinnerIs() {
     this.gameWon = true;
-    $('#modal').modal('show');
+    setTimeout(() => { $('#modal').modal('show');}, 10000)
     console.log('modal');
   }
   isDraw() {
