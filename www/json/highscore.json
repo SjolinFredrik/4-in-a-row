@@ -11,15 +11,7 @@
           "highscoreList": {
             "↻": "$.data.highscoreList"
           },
-          "name": "fafa",
-          "score": 4,
-          "⚙": "HighscoreItem"
-        },
-        {
-          "highscoreList": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "faf",
+          "name": "djaghdab",
           "score": 4,
           "⚙": "HighscoreItem"
         }

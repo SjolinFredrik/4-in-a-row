@@ -25,8 +25,8 @@ class HighscorePage extends Component {
 
 
     update(){
-        
-        JSON._save('highscore', {data: this});
+        this.render();
+        JSON._save('highscore-data', {data: this});
     }
 // addItem() {
 // let winnerPlayer = this.game.currentPlayer.name;
