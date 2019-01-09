@@ -10,8 +10,7 @@ class Board extends Component {
     this.draw = false;
     //this.count = 0;
     //this.winnerColor = '';
-    this.addEvents({
-    });
+   
   }
   createBoard() {
     for (let row = 0; row < 6; row++) {
@@ -37,6 +36,8 @@ class Board extends Component {
         };
         this.checkForTie();
         this.game.changePlayer();
+        if(this.game.currentPlayer.type === 'computer'){
+        this.makeMoveBot();}
         break;
       }
     }
@@ -45,7 +46,7 @@ class Board extends Component {
 
   
   makeMoveBot() {
-
+   
     setTimeout(() => {
       let emptyCell = true;
       while (emptyCell) {

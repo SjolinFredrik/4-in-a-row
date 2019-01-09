@@ -9,14 +9,15 @@ class Cell extends Component {
     this.addEvents({
       'click div>div': 'click'
     });
-    }
+  }
 
   click(e) {
-  //  if(this.game.currentPlayer.isHuman === true){
+     if(this.game.currentPlayer.type === 'human') {
       this.game.board.makeMove(this.col);
- //   } else {
-      this.game.board.makeMoveBot();
-    }
-   
+   //  } else  {
+      // this.game.board.makeMoveBot();
+      // console.log("HEy bot");
+     }
 
+  }
 }
