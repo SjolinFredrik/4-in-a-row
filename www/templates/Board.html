@@ -1,5 +1,49 @@
-<div class="board container-fluid">
-  <div class="row">
-    ${this.board}
+<section class="gameboard container-fluid">
+
+  <div class="board container-fluid">
+    <div class="row">
+      ${this.board}
+    </div>
   </div>
- </div>
+  <div>
+    ${!this.gameWon ? '' : `<div id="modal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Grattis!!!</h5>
+          </div>
+          <div class="modal-body">
+            <p> ${this.game.currentPlayer.name} har vunnit!</p>
+          </div>
+          <div class="modal-footer">
+            <a class="restart-button btn btn-secondary" data-dismiss="modal">Spela igen</a>
+            <a class="highscore-button btn btn-primary" href="/highscore" data-dismiss="modal">Highscore</a>
+          </div>
+        </div>
+      </div>
+    </div>`}
+  </div>
+  <div>
+    ${!this.draw ? '' : `<div id="draw-modal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Oavgjort!</h5>
+          </div>
+          <div class="modal-body">
+            <p> Spelet är oavjort! Du får prova igen!</p>
+          </div>
+          <div class="modal-footer">
+            <a class="restart-button btn btn-secondary" data-dismiss="modal">Spela igen</a>
+            <a class="highscore-button btn btn-primary" href="/highscore" data-dismiss="modal">Highscore</a>
+          </div>
+        </div>
+      </div>
+    </div>`}
+  </div>
+
+
+
+
+
+</section>

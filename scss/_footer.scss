@@ -1,4 +1,27 @@
+footer{
+    background-color: #d2dae2;
+    color: rgb(15, 15, 15);
+    padding: 10px;
+    font-size: 17px;
+ p{
+    @font-face {
+        font-family: 'ONEDAY', sans-serif;;
+        src: url('/www/fonts/ONEDAY.ttf');
+      }
+  }
+  
 i {
-  font-size: 35px;
-  margin-bottom: 15px;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+footer > p{
+    @font-face {
+        font-family: 'ONEDAY', sans-serif;
+        src: url('/www/Fonts/ONEDAY.otf');
+    }
+}
+main > .container {
+padding-top: 60px;
+}
 }

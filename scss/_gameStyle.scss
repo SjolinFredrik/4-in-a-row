@@ -10,6 +10,8 @@
 .board {
   width: 600px;  
   background: royalblue;
+  border: 20px solid royalblue;
+  border-radius: 3%;
 }
 
 .cell {
@@ -34,33 +36,54 @@
   background-color: white;
 }
 
-.cell > div > div.red {
-   background-color: red;
- }
+
+.cell > div > div:hover{
+
+  opacity: 0.8;
+}
+
 
  .cell > div > div.yellow {
-   background-color: yellow;
+  background-image:url('/images/yellowm.png');
+  background-size: cover;
  }
+
+ .cell > div > div.red {
+  background-image:url('/images/redm.png');
+  background-size: cover;
+ }
+
 
  .action{
    cursor: pointer;
  }
 
+
+ .current-player{
+   text-align: center;
+ }
   // Small devices (landscape phones, less than 768px)
   @media (max-width: 350px) {
-    max-width: 300px;
+    max-width: 100%;
 
   }
   
 
  @media (max-width: 575.98px) { 
    .board {
-     max-width: 400px;
+     max-width: 100%;
  }
  }
 
- // Medium devices (tablets, less than 992px)
- @media (max-width: 991.98px) {
-
+ .current-player{
+   @font-face {
+     font-family: 'ONEDAY', sans-serif;
+     src: url(fonts/ONEDAY.ttf);
+   }
+   .player-name{
+     text-transform: uppercase;
+     font-size: 18px;
+   }
  }
+
  

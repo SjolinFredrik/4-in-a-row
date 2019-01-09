@@ -1,0 +1,44 @@
+#modal {
+  margin: auto;
+  width: 50%;
+  top: 25%;
+  left: 25%;
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+}
+
+#draw-modal {
+  margin: auto;
+  width: 50%;
+  top: 25%;
+  left: 25%;
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+
+}
+
+.modal-content{
+  background-image: url("/images/test.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+
+  .modal-header{
+      border: none;
+
+
+      .modal-title{
+          font-size: 50px;
+          text-align: center;
+          width: 100%;
+          margin-top: 60px;
+          background:white;
+      }
+  }
+}
+
+.modal-body{
+  text-align: center;
+}

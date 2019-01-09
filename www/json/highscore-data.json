@@ -1,0 +1,36 @@
+{
+  "data": {
+    "route": "/highscore",
+    "title": "topplista",
+    "highscoreList": {
+      "page": {
+        "route": "/highscore",
+        "title": "topplista",
+        "highscoreList": {
+          "↻": "$.data.highscoreList"
+        },
+        "⚙": "HighscorePage"
+      },
+      "items": [
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "af",
+          "score": 4,
+          "⚙": "HighscoreItem"
+        },
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "fhakufa",
+          "score": 4,
+          "⚙": "HighscoreItem"
+        }
+      ],
+      "⚙": "HighscoreList"
+    },
+    "⚙": "HighscorePage"
+  }
+}

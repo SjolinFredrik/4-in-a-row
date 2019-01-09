@@ -14,7 +14,21 @@ class Router {
     $(document).on('click', 'a', function(e){
       // assume all links starting with '/' are internal
       let link = $(this).attr('href');
-      if(link.indexOf('/') === 0){
+      if(link && link.indexOf('/') === 0){
+        e.preventDefault(); // no hard reload of page
+        history.pushState(null, null, link); // change url (no reload)
+        that.setPath(link);
+        that.mainInstance.render();
+      }
+    });
+  }
+
+  listenToLinkButtonClicks() {
+    let that = this;
+    $(document).on('click', '.link-button', function (e) {
+      // assume all links starting with '/' are internal
+      let link = $(this).attr('href');
+      if (link.indexOf('/') === 0) {
         e.preventDefault(); // no hard reload of page
         history.pushState(null, null, link); // change url (no reload)
         that.setPath(link);
