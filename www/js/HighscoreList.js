@@ -1,16 +1,13 @@
 class HighscoreList extends Component {
 
-  constructor(page, name) {
+  constructor(page) {
     super();
-    this.highscoreList = [];
-    this.name = name;
+    //this.name = name;
     this.page = page;
-    this.update();
+    this.items = [];
   }
 
-
-  update() {
-    JSON._save('highscore', { data: this });
+  addItem(name) {
+    this.items.push(new Item(this, name));
   }
-
 }

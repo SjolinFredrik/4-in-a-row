@@ -4,24 +4,37 @@ class HighscorePage extends Component {
   constructor() {
     super();
     this.addRoute('/highscore', 'topplista');
-
-    this.addEvents({
-      'click submit': 'submitButton'
-    });
-
-    this.list = [];
-
+    this.highscoreList = new HighscoreList(this);
   }
 
-  addToHighscoreList() {
-    let highscoreList = [];
-    //let input = "winnerform";
-    let input = document.getElementById("input");
-    let winner = (this.baseEl.find('#input').val());
-    console.log('<li>' + winner + '</li>');
+addItem() {
+let winnerPlayer = 'Winner player';
+let winnerScore = 'Winner score';
+//let itemName = this.baseEl.find('.btn').val();
+this.highscoreList.addItem(winnerPlayer, winnerScore);
+this.update();
+//this.baseEl.find('.btn').focus();
+}
 
-    $(highscoreList).push("#input").val;
-  }
+addHighscore(winnerName, winnerScore){
+  this.highscoreList.addHighscore(winnerName, winnerScore);
+  this.update();
+}
+
+update() {
+  this.render();
+  JSON._save('highscore-data', { data: this });
+}
+
+//   let highscoreList = [];
+//   //let input = "winnerform";
+//   let input = document.getElementById("input");
+//   let winner = (this.baseEl.find('#input').val());
+//   console.log('<li>' + winner + '</li>');
+
+//   $(highscoreList).push("#input").val;
+// }
+
 
 //TO DO:
   //what should go into highscore? => name and moves
