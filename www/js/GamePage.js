@@ -6,8 +6,7 @@ class GamePage extends Component {
 
     this.playersForm = new PlayersForm();
     this.addEvents({
-      'click .start-game': 'startGame',
-      'click .restart-button': 'startGame'
+      'click .start-game': 'startGame'
     });
     Store.gamePage = this;
 
@@ -15,14 +14,22 @@ class GamePage extends Component {
 
   // create a method to start the game with 2 players, and put them
   // into one array So Game.js can catch this object.
-
+  restartGame(players) {
+    this.game = new Game(players, undefined, this);
+    console.log('Starting new game with players', players);
+    this.render();
+  }
   startGame() {
     let playerOneType = $("input[type='radio'][name='player1']:checked").val();
     console.log('player1', playerOneType);
     let playerTwoType = $("input[type='radio'][name='player2']:checked").val();
     console.log('player2', playerTwoType);
-    let player1 = new Player(this.baseEl.find('#name1').val(), 'red', playerOneType);
-    let player2 = new Player(this.baseEl.find('#name2').val(), 'yellow', playerTwoType);
+    let player1Name = this.baseEl.find('#name1').val();
+    console.log(player1Name);
+    let player2Name = this.baseEl.find('#name2').val();
+    console.log(player2Name);
+    let player1 = new Player(player1Name, 'red', playerOneType);
+    let player2 = new Player(player2Name, 'yellow', playerTwoType);
 
     // if (this.baseEl.find('#computer1').val()) {
     //   console.log('value:', this.baseEl.find('#computer1').val())
@@ -43,8 +50,8 @@ class GamePage extends Component {
 
     // Calls on the method for the validation that's created
     // in the PlayersForm.js, when the validation is a succsess the game starts.
-   // if (this.playersForm.validateInputNames()) {
-      this.game = new Game([player1, player2]);
+    if (this.playersForm.validateInputNames()) {
+      this.game = new Game([player1, player2], undefined, this);
 
       //adding navbar to Store variable to temporarilly store navbar 
       Store.navbar.showingCancelButton = true;
@@ -52,7 +59,7 @@ class GamePage extends Component {
       this.render();
 
     }
-  
+  }
 
   unmount() {
     delete this.game;
