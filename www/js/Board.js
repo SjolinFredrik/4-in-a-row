@@ -11,7 +11,6 @@ class Board extends Component {
     //this.count = 0;
     //this.winnerColor = '';
     this.addEvents({
-      'click .restart-button': 'startGame'
     });
   }
   createBoard() {

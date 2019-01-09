@@ -2,11 +2,12 @@ class Game extends Component {
 
   // players catches the created array in gamepage
   constructor(players, color, gamePage) {
+    console.log('constructing new game with players', players, 'and gamepage', gamePage)
     super();
     this.players = players;
-    this.currentPlayer = players[0];
-    //this.showPlayer = this.currentPlayer.name;
-    //this.changePlayer();
+    this.currentPlayer = players[1];
+    this.showPlayer = this.currentPlayer.name;
+    this.changePlayer();
 
     //this.modalHide();
     //this.theWinnerIs();
@@ -14,10 +15,13 @@ class Game extends Component {
     // this.modal = new Modal('#modal', this);
     this.gamePage = gamePage;
     this.addEvents({
-      'click .restart-button': 'startGame'
+      'click .restart-button': 'restartGame'
     });
   }
-
+  restartGame(){
+    console.log('this.players', this.players);
+    this.gamePage.restartGame(this.players);
+  }
   changePlayer() {
     this.currentPlayer = this.currentPlayer === this.players[0] ? this.players[1] : this.players[0];
   

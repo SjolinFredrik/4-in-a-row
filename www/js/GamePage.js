@@ -6,8 +6,7 @@ class GamePage extends Component {
 
     this.playersForm = new PlayersForm();
     this.addEvents({
-      'click .start-game': 'startGame',
-      'click .restart-button': 'startGame'
+      'click .start-game': 'startGame'
     });
     Store.gamePage = this;
 
@@ -15,7 +14,11 @@ class GamePage extends Component {
 
   // create a method to start the game with 2 players, and put them
   // into one array So Game.js can catch this object.
-
+  restartGame(players) {
+    this.game = new Game(players, undefined, this);
+    console.log('Starting new game with players', players);
+    this.render();
+  }
   startGame() {
     let playerOneType = $("input[type='radio'][name='player1']:checked").val();
     console.log('player1', playerOneType);
@@ -47,8 +50,8 @@ class GamePage extends Component {
 
     // Calls on the method for the validation that's created
     // in the PlayersForm.js, when the validation is a succsess the game starts.
-   // if (this.playersForm.validateInputNames()) {
-      this.game = new Game([player1, player2]);
+    if (this.playersForm.validateInputNames()) {
+      this.game = new Game([player1, player2], undefined, this);
 
       //adding navbar to Store variable to temporarilly store navbar 
       Store.navbar.showingCancelButton = true;
@@ -56,7 +59,7 @@ class GamePage extends Component {
       this.render();
 
     }
-  
+  }
 
   unmount() {
     delete this.game;
