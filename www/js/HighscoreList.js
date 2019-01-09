@@ -1,9 +1,10 @@
 class HighscoreList extends Component {
 
-  constructor(page) {
+  constructor(page, game) {
     super();
     //this.name = name;
     this.page = page;
+    this.game = game;
     this.items = [];
   }
 
