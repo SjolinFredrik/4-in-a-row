@@ -1,8 +1,11 @@
 body{
   font-weight: 200;
+
 }
 form {
   text-align: center;
+  margin: auto 0;
+  
 }
 
 input {
@@ -23,15 +26,24 @@ input:valid {
   border-color: rgb(15, 233, 80);
 }
 
-.mario {
-  float: left;
-  width: 20%;
-  position: relative;
+.images-form{
+    width: 100%;
+    height: auto;
+    margin: auto 0;
 }
-
-.luigi {
+  .mario{
+    float: left;
+    width: 60%;
+    height: auto;
+    position: relative;
+    padding: 10px;
+ 
+  }
+  .luigi{
   float: right;
-  width: 13%;
+  width: 40%;
+  height: auto;
   position: relative;
+  padding-left: 0 !important;
 }
 
