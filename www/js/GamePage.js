@@ -17,8 +17,12 @@ class GamePage extends Component {
   // into one array So Game.js can catch this object.
 
   startGame() {
-    let player1 = new Player(this.baseEl.find('#name1').val(), 'red');
-    let player2 = new Player(this.baseEl.find('#name2').val(), 'yellow');
+    let playerOneType = $("input[type='radio'][name='player1']:checked").val();
+    console.log('player1', playerOneType);
+    let playerTwoType = $("input[type='radio'][name='player2']:checked").val();
+    console.log('player2', playerTwoType);
+    let player1 = new Player(this.baseEl.find('#name1').val(), 'red', playerOneType);
+    let player2 = new Player(this.baseEl.find('#name2').val(), 'yellow', playerTwoType);
 
     // Calls on the method for the validation that's created
     // in the PlayersForm.js, when the validation is a succsess the game starts.
