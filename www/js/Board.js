@@ -10,6 +10,8 @@ class Board extends Component {
     // this.modalHide();
     this.gameWon = false;
     this.draw = false;
+    this.winner = '';
+    this.winCount = 0;
     //this.count = 0;
     //this.winnerColor = '';
 
@@ -281,8 +283,12 @@ class Board extends Component {
             //modal to show the winner
             theWinnerIs() {
               this.gameWon = true;
+              this.winner = this.game.currentPlayer.name;
+              this.winCount = this.game.currentPlayer.moveNumber;
               $('#modal').modal('show');
               console.log('modal');
+
+              App.highscorePage.addHiScore(this.winner, this.winCount);
             }
 
             isDraw() {

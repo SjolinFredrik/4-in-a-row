@@ -1,5 +1,31 @@
 {
   "data": {
-    "highscoreList": []
+    "route": "/highscore",
+    "title": "topplista",
+    "highscoreList": {
+      "page": {
+        "↻": "$.data"
+      },
+      "items": [
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "fafa",
+          "score": 4,
+          "⚙": "HighscoreItem"
+        },
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "faf",
+          "score": 4,
+          "⚙": "HighscoreItem"
+        }
+      ],
+      "⚙": "HighscoreList"
+    },
+    "⚙": "HighscorePage"
   }
 }
