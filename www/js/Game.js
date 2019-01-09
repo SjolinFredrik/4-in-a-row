@@ -5,7 +5,7 @@ class Game extends Component {
     super();
     Store.game = this;
     this.players = players;
-    this.currentPlayer = players[0];
+    this.currentPlayer = players[0]; 
     //this.showPlayer = this.currentPlayer.name;
     this.changePlayer();
     //this.modalHide();
