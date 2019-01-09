@@ -10,8 +10,8 @@ class Board extends Component {
     // this.modalHide();
     this.gameWon = false;
     this.draw = false;
-    this.count = 0;
-    this.winnerColor = '';
+    //this.count = 0;
+    //this.winnerColor = '';
     this.addEvents({
       'click .restart-button': 'startGame'
     });
@@ -59,6 +59,9 @@ class Board extends Component {
         //  emptyCell = false;
           this.board[row][randomCol].render();
           this.checkForWin();
+          if (this.gameWon === true) {
+            break
+          };
           this.checkForTie();
          
           this.game.changePlayer();
