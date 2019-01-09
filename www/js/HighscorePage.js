@@ -1,15 +1,16 @@
 
 class HighscorePage extends Component {
 
-  constructor() {
+  constructor(game) {
     super();
     this.addRoute('/highscore', 'topplista');
     this.highscoreList = new HighscoreList(this);
+    this.game = game;
   }
 
 addItem() {
-let winnerPlayer = 'Winner player';
-let winnerScore = 'Winner score';
+let winnerPlayer = this.game.currentPlayer.name;
+let winnerScore = this.game.CurrentPlayer.moveNumber;
 //let itemName = this.baseEl.find('.btn').val();
 this.highscoreList.addItem(winnerPlayer, winnerScore);
 this.update();

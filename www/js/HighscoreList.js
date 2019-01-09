@@ -8,6 +8,6 @@ class HighscoreList extends Component {
   }
 
   addItem(name) {
-    this.items.push(new Item(this, name));
+    this.items.push(new HighcoreItem(this, name, moves));
   }
 }
