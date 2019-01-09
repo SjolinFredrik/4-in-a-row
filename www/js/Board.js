@@ -1,11 +1,9 @@
 class Board extends Component {
-
   constructor(game, gamePage) {
     super();
     this.board = [];
     this.game = game;
     this.gamePage = gamePage;
-
     this.createBoard();
     // this.modalHide();
     this.gameWon = false;
@@ -16,7 +14,6 @@ class Board extends Component {
       'click .restart-button': 'startGame'
     });
   }
-
   createBoard() {
     for (let row = 0; row < 6; row++) {
       let row = [];
@@ -26,7 +23,6 @@ class Board extends Component {
       this.board.push(row);
     }
   }
-
   //loop through all cells to find empty, 
   //when empty and player chooses row find last empty cell 
   //and fill with player color
@@ -46,13 +42,11 @@ class Board extends Component {
     }
     return false;
   }
-
-
   makeMoveBot() {
    // let emptyCell = true;
    // while (emptyCell) {
+     setTimeout(() => {
       let randomCol = Math.floor(Math.random() * 7);
-
       for (let row = 5; row >= 0; row--) {
         if (this.board[row][randomCol].color === "") {
           this.board[row][randomCol].color = this.game.currentPlayer.color;
@@ -67,11 +61,10 @@ class Board extends Component {
           this.game.changePlayer();
           break;
           // Math.floor(Math.random() * 7);
-
-
         }
    //   }
-    }
+      }
+    }, 1000)
   }
   //make a function for a bot
   // makeMoveBot(col) {
@@ -95,7 +88,6 @@ class Board extends Component {
   //     }
   //   }
   // }
-
   //to check for win create a variable for winner color, set winning conditions and alert result
   checkForWin() {
     let winnerColor;
@@ -103,22 +95,18 @@ class Board extends Component {
     if (this.checkVerticals() === 'yellow' || this.checkVerticals() === 'red') {
       winnerColor = this.checkVerticals();
       this.gameWon = true;
-
       this.theWinnerIs();
       this.render();
-
     } else if (this.checkHorizontals() === 'yellow' || this.checkHorizontals() === 'red') {
       winnerColor = this.checkHorizontals();
       this.gameWon = true;
       this.theWinnerIs();
       this.render();
-
     } else if (this.checkDiagonalsBLtoTR() === 'yellow' || this.checkDiagonalsBLtoTR() === 'red') {
       winnerColor = this.checkDiagonalsBLtoTR();
       this.gameWon = true;
       this.theWinnerIs();
       this.render();
-
     } else if (this.checkDiagonalsTLtoBR() === 'yellow' || this.checkDiagonalsTLtoBR() === 'red') {
       winnerColor = this.checkDiagonalsTLtoBR();
       this.gameWon = true;
@@ -131,8 +119,6 @@ class Board extends Component {
   //   }else if (this.checkHorizontals() && this.checkVerticals() && this.checkDiagonalsBLtoTR() && this.checkDiagonalsTLtoBR() !== 'red' ){
   //     this.game.modalHide();
   // }
-
-
   //checking for a tie
   checkForTie() {
     let count = 0;
@@ -172,8 +158,6 @@ class Board extends Component {
     }
     return false;
   }
-
-
   checkVerticals() {
     let colors = ['red', 'yellow'];
     for (let color of colors) {
@@ -195,8 +179,6 @@ class Board extends Component {
     }
     return false;
   }
-
-
   checkDiagonalsBLtoTR() {
     let colors = ['red', 'yellow'];
     for (let color of colors) {
@@ -216,8 +198,6 @@ class Board extends Component {
     }
     return false;
   }
-
-
   checkDiagonalsTLtoBR() {
     let colors = ['red', 'yellow'];
     for (let color of colors) {
@@ -237,7 +217,6 @@ class Board extends Component {
     }
     return false;
   }
-
   // modalHide(){
   //   if(this.gameWon){
   //     $('#modal').modal('hide');
@@ -250,10 +229,8 @@ class Board extends Component {
     $('#modal').modal('show');
     console.log('modal');
   }
-
   isDraw() {
     this.draw = true;
     $('#draw-modal').modal('show');
   }
-
 }
