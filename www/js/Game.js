@@ -20,7 +20,7 @@ class Game extends Component {
 
   changePlayer() {
     this.currentPlayer = this.currentPlayer === this.players[0] ? this.players[1] : this.players[0];
-    this.showPlayer = this.currentPlayer;
+    this.showPlayer = this.currentPlayer.name;
    
     // if (this.currentPlayer === this.players[0]) {
     //   if (this.players[0].isHuman === false) {

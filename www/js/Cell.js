@@ -12,11 +12,11 @@ class Cell extends Component {
     }
 
   click(e) {
-    if(this.game.currentPlayer.isHuman === true){
+  //  if(this.game.currentPlayer.isHuman === true){
       this.game.board.makeMove(this.col);
-    } else {
+ //   } else {
       this.game.board.makeMoveBot();
     }
-   }
+   
 
 }

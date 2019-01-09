@@ -24,22 +24,22 @@ class GamePage extends Component {
     let player1 = new Player(this.baseEl.find('#name1').val(), 'red', playerOneType);
     let player2 = new Player(this.baseEl.find('#name2').val(), 'yellow', playerTwoType);
 
-    if (this.baseEl.find('#computer1').val()) {
-      console.log('value:', this.baseEl.find('#computer1').val())
-      console.log("redbot");
-      player1 = new Player(this.baseEl.find('#name1').val(), 'red', false);
-    } else {
-      console.log("redhuman");
-      player1 = new Player(this.baseEl.find('#name1').val(), 'red', true);
-    }
-    if (this.baseEl.find('#computer2').val(), 'Bot2') {
-      player2 = new Player(this.baseEl.find('#name2').val(), 'yellow', false);
-      console.log("yellobot");
+    // if (this.baseEl.find('#computer1').val()) {
+    //   console.log('value:', this.baseEl.find('#computer1').val())
+    //   console.log("redbot");
+    //   player1 = new Player(this.baseEl.find('#name1').val(), 'red', false);
+    // } else {
+    //   console.log("redhuman");
+    //   player1 = new Player(this.baseEl.find('#name1').val(), 'red', true);
+    // }
+    // if (this.baseEl.find('#computer2').val(), 'Bot2') {
+    //   player2 = new Player(this.baseEl.find('#name2').val(), 'yellow', false);
+    //   console.log("yellobot");
 
-    } else {
-      console.log("yeowhuman");
-      player2 = new Player(this.baseEl.find('#name2').val(), 'yellow', true);
-    }
+    // } else {
+    //   console.log("yeowhuman");
+    //   player2 = new Player(this.baseEl.find('#name2').val(), 'yellow', true);
+    // }
 
     // Calls on the method for the validation that's created
     // in the PlayersForm.js, when the validation is a succsess the game starts.
@@ -52,7 +52,7 @@ class GamePage extends Component {
       this.render();
 
     }
-  }
+  
 
   unmount() {
     delete this.game;

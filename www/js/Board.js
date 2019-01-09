@@ -49,24 +49,25 @@ class Board extends Component {
 
 
   makeMoveBot() {
-    let emptyCell = true;
-    while (emptyCell) {
+   // let emptyCell = true;
+   // while (emptyCell) {
       let randomCol = Math.floor(Math.random() * 7);
 
       for (let row = 5; row >= 0; row--) {
         if (this.board[row][randomCol].color === "") {
           this.board[row][randomCol].color = this.game.currentPlayer.color;
-          emptyCell = false;
+        //  emptyCell = false;
           this.board[row][randomCol].render();
-          this.game.changePlayer();
-          this.checkForTie();
           this.checkForWin();
-
+          this.checkForTie();
+         
+          this.game.changePlayer();
+          break;
           // Math.floor(Math.random() * 7);
 
 
         }
-      }
+   //   }
     }
   }
   //make a function for a bot
