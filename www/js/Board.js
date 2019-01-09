@@ -85,8 +85,10 @@ class Board extends Component {
           }
         }
       }
+    }
     }, 1000)
-  }
+  
+}
 
             //make a function for a bot
             /* makeMoveBot(col) {
