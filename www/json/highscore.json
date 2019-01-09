@@ -1,6 +1,23 @@
 {
   "data": {
     "route": "/highscore",
-    "title": "topplista"
+    "title": "topplista",
+    "highscoreList": {
+      "page": {
+        "↻": "$.data"
+      },
+      "items": [
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "djaghdab",
+          "score": 4,
+          "⚙": "HighscoreItem"
+        }
+      ],
+      "⚙": "HighscoreList"
+    },
+    "⚙": "HighscorePage"
   }
 }

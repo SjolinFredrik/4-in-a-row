@@ -1,48 +1,56 @@
 class HighscoreList extends Component {
 
-  constructor(page) {
+  constructor(page, game) {
     super();
+    //this.name = name;
     this.page = page;
+    this.game = game;
     this.items = [];
   }
+  addHiscore(name, score){
 
-  countPlayerMoves(){
-    for(i = 0; i < 21; i++){
-      return count++;
-      
+    if(this.items.length <  10){
+        this.items.push(new HighscoreItem(this, name, score));
     }
-  }
-  addHighscore(winnerName, winnerMoves) {
+    else{
+        let lowestRank = this.items.length -1;
+        let lowestRankScore = this.items[lowestRank].score;
 
-    if (this.items.length < 10) {
-      this.items.push(new Item(this, winnerName, winnerMoves));
-    }
-    else {
-      let lastInList = this.items.length - 1;
-      let lastInListMoves = this.items[lastInList].moves;
+        if (score <= lowestRankScore && this.items.length <= 10){
 
-      if (moves <= lastInListMoves && this.items.length <= 10) {
+            for(let i = 0; i <= this.items.length - 1; i++){
 
-        for (let i = 0; i <= this.items.length - 1; i++) {
+                if(this.items[i].score >= score){
 
-          if (this.items[i].moves >= moves) {
+                    let newIndex = this.items.indexOf(this.items[i])
+                    i = this.items.length;
 
-            let newIndex = this.items.indexOf(this.items[i])
-            i = this.items.length;
+                    this.items.splice(newIndex, 0, new Item(this, name, score));
+                }
+            }
 
-            this.items.splice(newIndex, 0, new Item(this, name, moves));
-          }
         }
-      }
 
-      if (this.items.length > 10) {
-        this.removeHighscore(lastInList);
-      }
+        if(this.items.length > 10){
+        
+            this.removeHiscore(lowestRank);
+
+        }
     }
-  }
 
-  removeHighscore(item) {
+}
+
+removeHiscore(item){
     this.items.splice(this.items.indexOf(item), 1);
     this.page.update();
-  }
 }
+
+}
+
+
+// addTask(){
+//   let name = this.baseEl.find('.task-name').val();
+//   this.tasks.push(new Task(name, this));
+//   this.render();
+//   this.baseEl.find('.task-name').focus();
+// }

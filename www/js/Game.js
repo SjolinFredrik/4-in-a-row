@@ -4,6 +4,7 @@ class Game extends Component {
   constructor(players, color, gamePage) {
     console.log('constructing new game with players', players, 'and gamepage', gamePage)
     super();
+    Store.game = this;
     this.players = players;
     this.currentPlayer = players[1];
     this.showPlayer = this.currentPlayer.name;
@@ -23,6 +24,7 @@ class Game extends Component {
     this.gamePage.restartGame(this.players);
   }
   changePlayer() {
+    this.currentPlayer.moveNumber++;
     this.currentPlayer = this.currentPlayer === this.players[0] ? this.players[1] : this.players[0];
   
     this.showPlayer = this.currentPlayer.name;
