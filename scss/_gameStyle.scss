@@ -43,16 +43,6 @@
 }
 
 
-
-
-// .cell > div > div.red {
-//    background-color: red;
-//  }
-
-//  .cell > div > div.yellow {
-//    background-color: yellow;
-//  }
-
  .cell > div > div.yellow {
   background-image:url('/images/yellowm.png');
   background-size: cover;
@@ -85,5 +75,15 @@
  }
  }
 
+ .current-player{
+   @font-face {
+     font-family: 'ONEDAY', sans-serif;
+     src: url(fonts/ONEDAY.ttf);
+   }
+   .player-name{
+     text-transform: uppercase;
+     font-size: 18px;
+   }
+ }
 
  
