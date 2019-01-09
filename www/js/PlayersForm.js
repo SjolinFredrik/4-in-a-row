@@ -5,7 +5,6 @@ class PlayersForm extends Component {
     this.addEvents({
       'change .untouched': 'changeColor',
       'keydown input[type="text"]': 'resetValidity',
-      //'click keydown input[type="radio"]': 'radioPlayerType',
     });
   }
   /*******************************VALIDATION OF INPUT NAMES*******************************/
@@ -47,16 +46,17 @@ class PlayersForm extends Component {
     }
     return false;
   }
+
+
+  
+//  radioPlayerType(e){
+//   // look for window.event in case event isn't passed in
+//   e = e || window.event;
+//   if (e.keyCode == 13) {
+//     document.getElementsByName('radio').click();
+//     return true;
+// }
+//   return false;
+// }
 }
 
-/* radioPlayerType(e){
-    // look for window.event in case event isn't passed in
-    e = e || window.event;
-    if (e.keyCode == 13) {
-      document.getElementsByName('radio').click();
-      return true;
-  }
-    return false;
-  }
-
-*/
