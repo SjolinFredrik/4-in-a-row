@@ -1,13 +1,12 @@
 class Player extends Component {
 
-  constructor(name, color) {
+  constructor(name, color, type){
     super();
     this.name = name;
     this.color = color;
+    this.type = type;
     this.moveNumber = 1;
 
-    //setting default that the player is human
-    //if bot - then false
-    this.isHuman = true;
   }
 }
+

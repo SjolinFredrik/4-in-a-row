@@ -1,14 +1,18 @@
-body > div {
+body{
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  font-size: 17px;
+  text-align: left;
 
   @font-face{
     font-family: 'Ailerons'; 
-    src: url('/www/fonts/Ailerons-Regular.otf'), sans-serif;
+    src: url('/fonts/Ailerons-Regular.otf'), sans-serif;
   }
 }
-
+p{
+  font-weight: 200;
+}
 main {
   flex: 1;
 }
@@ -16,22 +20,112 @@ main {
 h2, h4{
   @font-face {
     font-family: 'ONEDAY', sans-serif;;
-    src: url('/www/fonts/ONEDAY.ttf');
+    src: url('/fonts/ONEDAY.ttf');
   }
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #FF7400;
-  font-weight: 300;
- 
+  font-weight: 200;
+}
+.welcome{
+  margin: 0 auto;
+
 }
 
 
+.startpage-btn{
+  font-size: 1.5rem !important;
+  font-weight: 200;
+  }
 
-@media (max-width: 991.98px) {
-  .paddingl {
+
+  @media (min-width: 320px){
+   p.welcome-text{
+      font-size: 14px;
+      line-height: 1.4;
+      }
+    .aside{
+     padding-left: 0 !important;
+     height: auto;
+     flex: 100%;
+    }
+ }
+
+ @media (min-width: 768px) { 
+    p.welcome-text{
+      font-weight: 200;
+    }
+    .aside {
+      padding-left: 0 !important;
+      margin-top: 10px;
+      flex: 100%;
+    }
+    .startpage-btn{
+      font-size: 1.3rem !important;
+      margin-top: 5px !important;
+
+    }
+    }
+  @media (min-width: 992px){
+  p.welcome-text{
+    margin: 10px 0 0 0;
+    padding: 5px 0;
+    font-size: 17px;
+  }
+  .aside {
+    margin-top: 30px;
     padding-left: 0 !important;
+    padding: 10px;
+    .card-img{
+      width: 110%;
+      height: auto;
+      }
+
+  }
+  .startpage-btn{
+    width: 90%;
+    font-size: 1rem;
+  
   }
 }
 
-.btn{
-  width: 100%;
+@media screen and (min-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    h4{
+      margin-left: 10px !important;
+    }
+    p.welcome-text{
+      font-size: 22px;
+      line-height: 1.6 !important;
+      font-weight: 200;
+      margin-bottom: 30px !important;
+    }  
+    .aside{
+      padding-left: 0 !important;
+      padding-top: 5px;
+
+    }
+    .startpage-btn{
+      width: 100%
+    }
+    }
+
+    @media screen and (max-device-width: 1280px)
+    and (-webkit-min-device-pixel-ratio: 1){
+      p.welcome-text{
+        font-size: 25px;
+        margin-bottom: 50px !important;
+      }
+      .aside{
+        padding-top: 10px;
+      }
+    }
+ 
+.card-link{
+ color: #3e4ef0;
+ font-size: 18px;
 }
+
+
+
+
+  
