@@ -10,6 +10,9 @@ form {
 input {
   outline: none;
 }
+btn {
+  background-color: green;
+}
 
 // shows red when u have an empty field 1 char and above 10 chars.
 input:focus:invalid {
