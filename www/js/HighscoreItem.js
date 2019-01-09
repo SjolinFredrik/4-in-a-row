@@ -6,4 +6,5 @@ class HighscoreItem extends Component {
     this.name = name;
     this.score = score;
   }
+
 }
