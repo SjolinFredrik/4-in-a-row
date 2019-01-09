@@ -6,33 +6,14 @@ $fourth-color: #3e4ef0;
 $gray-light: #d2dae2;
 $gray-dark: #808e9b;
 $gray-darkest: #485460;
-
+$yellow: #ffd32a !important;
+$highligher: #ef5777 !important;
 $grid-columns:                12 !default;
 $grid-gutter-width:           20px !important;
 
-// breakpoints // @mediaqueries 
-/* $grid-breakpoints: (
-  xs: 0,
-  phone: 320px,
-  tablett: 768px,
-  ipad: 992px,
-  desktop: 1200px
-) !default;
+$warning:       $yellow;
+$highlight:     $highligher;
 
-@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
-@include _assert-starts-at-zero($grid-breakpoints);
+$bg-light: #d2dae2;
 
 
-// Grid containers
-//
-// Define the maximum width of `.container` for different screen sizes.
-
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px
-) !default;
-
-@include _assert-ascending($container-max-widths, "$container-max-widths");
-*/

@@ -57,6 +57,4 @@ class Game extends Component {
   //   }
 }
 
-  // modalHide(){
-  //   $('#modal').modal('hide');
-  // }
+
