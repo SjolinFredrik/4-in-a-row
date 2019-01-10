@@ -1,31 +1,21 @@
-<section class="highscore-page container">
+<div class="highscore-page container pl-0">
   <div class="row">
-    <div class="col">
-      <img class="img" src="/images/luigiFlyin.jpg">
-    </div>
-    <h1 class="col highscorelist-heading">Topplista</h1>
-    <div class="col">
+    <div class="col fireball-mario">
       <img src="/images/mario1.png">
     </div>
-  </div>
-  <div class="row">
-    <h4 class="col">Plats</h4>
-    <h4 class="col">Namn</h4>
-    <h4 class="col">Drag</h4>
-  </div>
-  <div class="row">
-    <div class="col pl-5">
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-      <li>8</li>
-      <li>9</li>
-      <li>10</li>
+    <h1 class="col highscorelist-heading">Topplista</h1>
+    <div class="col-2 flying-luigi">
+      <img src="/images/luigiFlyin.jpg">
     </div>
-    ${this.highscoreList}
+    <div class="col-2 mario-hiscorepage">
+      <img src="/images/mario-hiscorepage.jpg">
+    </div>
   </div>
-</section>
+  <!-- </div> -->
+  <div class="row highscorelist-head">
+    <div class="col-4" id="list-head-rank">Plats</div>
+    <div class="col-4 pl-0" id="list-head-name">Namn</div>
+    <div class="col-4" id="list-head-moves">Drag</div>
+  </div>
+  ${this.highscoreList}
+</div>
