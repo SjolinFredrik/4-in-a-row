@@ -5,6 +5,8 @@ body{
 
 form {
   text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 input {
@@ -44,3 +46,15 @@ input:valid {
 
 }
 
+.choose-playerTwo {
+  color: rgb(241, 241, 14);
+  font-size: 2.5rem;
+  text-shadow: 2px 1px 1px black;
+}
+
+.choose-playerOne {
+  color: #ff0000;
+  font-size: 2.5rem;
+  text-shadow: 2px 1px 1px black;
+
+}
