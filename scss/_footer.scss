@@ -6,15 +6,17 @@ i {
   margin-bottom: 10px;
 }
 
-// footer > p{
-//     @font-face {
-//         font-family: 'ONEDAY', sans-serif;
-//         src: url('/www/Fonts/ONEDAY.otf');
-//         }
-//     }
-}
+footer{
+    background-color: #d2dae2;
+    color: rgb(15, 15, 15);
+    padding: 10px;
+    font-size: 17px;
     
-    padding-top: 60px;
+ p{
+    @font-face {
+        font-family: 'ONEDAY', sans-serif;;
+        src: url('/www/fonts/ONEDAY.ttf');
+      }
   }
   
 i {
