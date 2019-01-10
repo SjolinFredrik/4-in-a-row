@@ -1,8 +1,22 @@
+body > div {
+    background-repeat: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+   }
+   
+  main {
+    flex: 1; 
+  }
+
 footer{
     background-color: #d2dae2;
     color: rgb(15, 15, 15);
     padding: 10px;
     font-size: 17px;
+    
  p{
     @font-face {
         font-family: 'ONEDAY', sans-serif;;
