@@ -35,6 +35,14 @@
           "name": "mel",
           "score": 4,
           "⚙": "HighscoreItem"
+        },
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "vvv",
+          "score": 5,
+          "⚙": "HighscoreItem"
         }
       ],
       "⚙": "HighscoreList"

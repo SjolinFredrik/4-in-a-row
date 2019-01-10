@@ -1,12 +1,12 @@
-.highscore{
-  width: 100%;
-  margin: auto 0;
-  height: auto;
+// .highscore{
+//   width: 100%;
+//   margin: auto 0;
+//   height: auto;
 
-  .list-head{
-    border: 1px solid #d2dae2;
-  }
-}
+//   .list-head{
+//     border: 1px solid #d2dae2;
+//   }
+// }
 
 
 li {
@@ -22,4 +22,8 @@ li {
 
 #rank {
   display: inline-block;
+}
+
+#fireball-mario #flying-luigi {
+  width: 80%;
 }
