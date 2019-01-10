@@ -5,45 +5,117 @@ li {
 .highscorelist-heading {
   text-align: center;
   font-size: 63px;
-  padding-top: 20%;
+  padding-top: 15%;
   padding-right: 33px;
-  @media (min-width: 768px) {
+
+  @media (max-width: 768px) {
     font-size: 22px;
   }
-  @media (min-width: 576px) {
+  @media (max-width: 576px) {
     font-size: 12px;
   }
-  @media (min-width: 320px) {
+  @media (max-width: 320px) {
     font-size: 16px;
   }
 }
 
- #rank #name #moves {
+ #list-head-rank   {
     font-size: 43px;
-  @media (min-width: 768px) {
+    font-weight: 300;
+    color: green;
+
+  @media (max-width: 768px) {
     font-size: 16px;
   }
-  @media (min-width: 576px) {
+  @media (max-width: 576px) {
     font-size: 12px;
 
   }
-  @media (min-width: 320px) {
+  @media (max-width: 320px) {
      font-size: 8px;
   }
 }
 
+#list-head-name {
+font-size: 43px;
+font-weight: 300;
+color: green;
 
-.fireball-mario .flying-luigi {
+@media (max-width: 768px) {
+font-size: 20px;
+}
+@media (max-width: 576px) {
+font-size: 16px;
+}
+
+@media (max-width: 320px) {
+ font-size: 12px;
+  }
+}
+
+#list-head-moves {
+  font-size: 43px;
+  font-weight: 300;
+  color: green;
+
+@media (max-width: 768px) {
+  font-size: 16px;
+}
+@media (max-width: 576px) {
+  font-size: 12px;
+
+}
+@media (max-width: 320px) {
+   font-size: 8px;
+  }
+}
+
+.fireball-mario  {
   display: block;
   width: 80%;
-  @media (min-width: 768px) {
-    font-size: 16px;
+
+  @media (max-width: 768px) {
+    display: none;
   }
-  @media (min-width: 576px) {
-    font-size: 12px;
+  @media (max-width: 576px) {
+    display: none;
 
   }
-  @media (min-width: 320px) {
-     font-size: 8px;
+  @media (max-width: 320px) {
+     display: none;
+  }
+}
+
+.flying-luigi {
+  display:block;
+  width: 80%;
+  padding-top: 10%;
+
+  @media (max-width: 768px) {
+    display: none;
+}
+  @media (max-width: 576px) {
+    display: none;
+
+}
+@media (max-width: 320px) {
+    display: none;
+  }
+}
+
+.mario-hiscorepage {
+  display:block;
+  width: 50%;
+  padding-top: 5%;
+
+  @media (max-width: 768px) {
+    display: none;
+}
+  @media (max-width: 576px) {
+    display: none;
+
+}
+  @media (max-width: 320px) {
+    display: none;
   }
 }
