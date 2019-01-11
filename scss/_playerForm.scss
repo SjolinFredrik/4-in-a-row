@@ -37,12 +37,32 @@ input:valid {
   float: left;
   width: 30%;
   position: relative;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+  @media (max-width: 576px) {
+    display: none;
+    }
+  @media (max-width: 320px) {
+    display: none;
+    }
 }
 
 .luigi {
   float: right;
   width: 23%;
   position: relative;
+
+  @media (max-width: 768px) {
+    display: none;
+    }
+  @media (max-width: 576px) {
+    display: none;
+    }
+  @media (max-width: 320px) {
+    display: none;
+    }
 
 }
 
