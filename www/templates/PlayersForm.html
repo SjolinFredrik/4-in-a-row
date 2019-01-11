@@ -1,40 +1,51 @@
-<form name="GameForm-container px-3">
-  <!--Player 1 input and choice of type-->
-    <div>
-      <h2 class="choose-playerOne mt-4 pb-3">Spelare 1</h2>
-      <div>
-        <input type="text" name="player1" placeholder="Ange namn:" required pattern="[a-zA-ZåäöÅÄÖ]{2,10}" title="Använd endast 2-10 bokstäver"
-          id="name1" class="untouched">
-      </div>
-    </div>
-  </div>
-  <div class="radio mt-4">
-    <div>Typ av spelare?</div>
-    <input type="radio" checked name="player1" id="human" value="human"> 
-    <label for="human">Människa</label>
-    <input type="radio" name="player1" id="computer1" value="computer">
-    <label for="bot">Dator</label>
-  </div>
-  <img class="mario" src="/images/mario.png" alt="mario">
-  <img class="luigi" src="/images/luigi.png" alt="luigi">
-  <!--Player 2 input and choice of type-->
-    <div>
-      <h2 class="choose-playerTwo mt-4 pb-3">Spelare 2</h2>
-      <div>
-        <input type="text" name="player2" placeholder="Ange namn:" required pattern="[a-zA-ZåäöÅÄÖ]{2,10}" title="Använd endast 2-10 bokstäver"
-          id="name2" class="untouched">
-      </div>
-    </div>
-  </div>
-  <div class="bot human mt-4">
-    <div>Typ av spelare?</div>
-    <input type="radio" checked name="player2" id="human" value="human">
-    <label for="human">Människa</label>
-    <input type="radio" name="player2" id="computer2" value="computer">
-    <label for="bot">Dator</label>
-  </div>
-  
+<div class="container">
+
+  <img class="luigi pt-5 pl-5" src="/images/luigi.png" alt="luigi">
+
+
+  <img class="mario pt-5 pr-5" src="/images/mario.png" alt="mario">
+
   <div>
-    <input type="submit" value="Börja spela!" class="btn btn-success start-game link-button col-md-2 mt-4 mb-5">
+    <form name="GameForm px-3">
+      <div class="form-row">
+        <div>
+          <!--Player 1 input and choice of type-->
+          <div>
+            <h2 class="choose-playerOne mt-4 pb-3">Spelare 1</h2>
+            <div class="col-4">
+              <input type="text" name="player1" placeholder="Ange namn:" required pattern="[a-zA-ZåäöÅÄÖ]{2,10}" title="Använd endast 2-10 bokstäver"
+                id="name1" class="untouched">
+            </div>
+            <div class="radio mt-4">
+              <div>Typ av spelare?</div>
+              <input type="radio" checked name="player1" id="human" value="human">
+              <label for="human">Människa</label>
+              <input type="radio" name="player1" id="computer1" value="computer">
+              <label for="bot">Dator</label>
+            </div>
+          </div>
+          <!--Player 2 input and choice of type-->
+          <div>
+            <h2 class="choose-playerTwo mt-4 pb-3">Spelare 2</h2>
+            <div>
+              <input type="text" name="player2" placeholder="Ange namn:" required pattern="[a-zA-ZåäöÅÄÖ]{2,10}" title="Använd endast 2-10 bokstäver"
+                id="name2" class="untouched">
+            </div>
+            <div class="bot human mt-4">
+              <div>Typ av spelare?</div>
+              <input type="radio" checked name="player2" id="human" value="human">
+              <label for="human">Människa</label>
+              <input type="radio" name="player2" id="computer2" value="computer">
+              <label for="bot">Dator</label>
+            </div>
+          </div>
+
+
+          <div>
+            <input type="submit" value="Börja spela!" class="btn btn-success start-game link-button mt-4 mb-5">
+          </div>
+        </div>
+    </form>
   </div>
-</form>
+
+</div>
