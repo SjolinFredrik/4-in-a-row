@@ -17,7 +17,6 @@ class PageContent extends Component {
     // optional, this is if we want to load data from a JSON file
    JSON._classes(HighscorePage, HighscoreList, HighscoreItem);
    let response = await JSON._load('highscore-data.json');
-   console.log(response);
    if(response === null){ return; }
    // set the original id of highscorePage
    // to get things into the "rendering loop"
