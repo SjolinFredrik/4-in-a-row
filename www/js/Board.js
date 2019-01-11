@@ -5,18 +5,13 @@ class Board extends Component {
     this.board = [];
     this.game = game;
     this.gamePage = gamePage;
-
     this.createBoard();
     this.makeMoveBot();
-    // this.modalHide();
     this.gameWon = false;
     this.draw = false;
     this.winner = '';
     this.winCount = 0;
-    //this.count = 0;
-    //this.winnerColor = '';
-
-
+   
   }
 
   createBoard() {
@@ -53,14 +48,11 @@ class Board extends Component {
     return false;
   }
 
-
-
   makeMoveBot() {
 
     setTimeout(() => {
       let emptyCell = true;
       while (emptyCell) {
-
         let randomCol = Math.floor(Math.random() * 7);
 
         for (let row = 5; row >= 0; row--) {
@@ -69,7 +61,6 @@ class Board extends Component {
               this.makeMove();
             }
             else if (this.game.currentPlayer.type === 'computer') {
-
               this.board[row][randomCol].color = this.game.currentPlayer.color;
               this.game.currentPlayer.moveNumber++;
               emptyCell = false;
@@ -79,13 +70,8 @@ class Board extends Component {
                 break
               };
               this.checkForTie();
-
               this.game.changePlayer();
-
               break;
-
-              // Math.floor(Math.random() * 7);
-
             }
           }
         }
@@ -100,7 +86,6 @@ class Board extends Component {
     if (this.checkVerticals() === 'yellow' || this.checkVerticals() === 'red') {
       winnerColor = this.checkVerticals();
       this.gameWon = true;
-
       this.theWinnerIs();
       this.render();
 
@@ -207,7 +192,6 @@ class Board extends Component {
     }
     return false;
   }
-
 
   checkDiagonalsTLtoBR() {
     let colors = ['red', 'yellow'];
