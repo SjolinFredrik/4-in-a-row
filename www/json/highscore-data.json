@@ -16,12 +16,36 @@
           "highscoreList": {
             "↻": "$.data.highscoreList"
           },
-          "name": "dgad",
+          "name": "dakjnf",
           "score": 4,
+          "⚙": "HighscoreItem"
+        },
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "ddaaator",
+          "score": 12,
           "⚙": "HighscoreItem"
         }
       ],
       "items": [
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "aleksandra",
+          "score": 4,
+          "⚙": "HighscoreItem"
+        },
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "nala",
+          "score": 4,
+          "⚙": "HighscoreItem"
+        },
         {
           "highscoreList": {
             "↻": "$.data.highscoreList"
@@ -74,16 +98,16 @@
           "highscoreList": {
             "↻": "$.data.highscoreList"
           },
-          "name": "hfaukf",
-          "score": 6,
+          "name": "bdahbd",
+          "score": 4,
           "⚙": "HighscoreItem"
         },
         {
           "highscoreList": {
             "↻": "$.data.highscoreList"
           },
-          "name": "duhakudh",
-          "score": 4,
+          "name": "hbjdha",
+          "score": 5,
           "⚙": "HighscoreItem"
         }
       ],
