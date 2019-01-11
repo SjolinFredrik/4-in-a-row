@@ -72,24 +72,16 @@
           "highscoreList": {
             "↻": "$.data.highscoreList"
           },
-          "name": "human",
-          "score": 5,
+          "name": "mmm",
+          "score": 4,
           "⚙": "HighscoreItem"
         },
         {
           "highscoreList": {
             "↻": "$.data.highscoreList"
           },
-          "name": "uman",
-          "score": 5,
-          "⚙": "HighscoreItem"
-        },
-        {
-          "highscoreList": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "sandra",
-          "score": 5,
+          "name": "peter",
+          "score": 4,
           "⚙": "HighscoreItem"
         }
       ],

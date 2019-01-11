@@ -219,7 +219,6 @@ class Board extends Component {
     this.winner = this.game.currentPlayer.name;
     this.winCount = this.game.currentPlayer.moveNumber;
     $('#modal').modal('show');
-    console.log('modal');
     App.highscorePage.addToHighscore(this.winner, this.winCount);
   }
 
