@@ -10,7 +10,6 @@ class NavBar extends Component {
     ];
     this.showingCancelButton = false;
     this.addEvents({
-      //"click li:contains(Spela)": 'showCancelButton',
       "click .cancel-button": 'hideCancelButton'
     });
     Store.navbar = this;

@@ -20,10 +20,9 @@ class HighscorePage extends Component {
     this.update();
   }
 
-
-    update(){
-        this.render();
-        JSON._save('highscore-data', {data: this});
-    }
+  update() {
+    this.render();
+    JSON._save('highscore-data', { data: this });
+  }
 }
 

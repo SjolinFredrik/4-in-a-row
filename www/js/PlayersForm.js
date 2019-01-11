@@ -48,15 +48,5 @@ class PlayersForm extends Component {
   }
 
 
-  
-//  radioPlayerType(e){
-//   // look for window.event in case event isn't passed in
-//   e = e || window.event;
-//   if (e.keyCode == 13) {
-//     document.getElementsByName('radio').click();
-//     return true;
-// }
-//   return false;
-// }
 }
 
