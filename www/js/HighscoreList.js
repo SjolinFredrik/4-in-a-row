@@ -9,7 +9,6 @@ class HighscoreList extends Component {
 
     addToHighscore(name, score) {
         this.list.push(new HighscoreItem(this, name, score));
-        console.log('highsocre')
         this.list.sort(function (a, b) {
             return a.score - b.score;
         });

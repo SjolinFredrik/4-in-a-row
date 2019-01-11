@@ -11,6 +11,16 @@
         },
         "⚙": "HighscorePage"
       },
+      "list": [
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "dgad",
+          "score": 4,
+          "⚙": "HighscoreItem"
+        }
+      ],
       "items": [
         {
           "highscoreList": {
