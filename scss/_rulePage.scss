@@ -1,33 +1,37 @@
-
-.lead, .rules-list{
-  font-size: 17px;
-  @font-face {
-    font-family: 'ONEDAY', sans-serif;
-    src: url('/fonts/ONEDAY.ttf');
-  }
-  line-height: 1.4;
-  font-weight: 200;
+.rpbutton {
+  font-size: 16px;
+  color: white;
+  border-radius: 5px;
+  padding: 7px;
+  padding-top: 13px;
 }
 
-.rules-image{
-  width: 100%;
-  height: auto;
-  position: absolute;
-  margin: auto 0;
+
+.about-text .card-text {
+  line-height: 1.5;
+}
+
+
+.card-title {
+  text-align: left;
 }
   .shroom{
     width: 20%;
     float: right;
     height: auto;
   }
-  .coins{
-    width: 40%;
+  .shroom-img {
+    width: 26%;
     height: auto;
-    float: right;
+    float: left;
   }
   
 .card{
   border: 2px solid #ffd32a;
+}
+
+.card-img-rules {
+  width: 101%;
 }
 
 

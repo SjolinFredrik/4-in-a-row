@@ -5,17 +5,14 @@ class Board extends Component {
     this.board = [];
     this.game = game;
     this.gamePage = gamePage;
-   
     this.createBoard();
-    // this.modalHide();
+    this.makeMoveBot();
     this.gameWon = false;
     this.draw = false;
-    //this.count = 0;
-    //this.winnerColor = '';
-    this.addEvents({
-      'click .restart-button': 'startGame'
-    });
-}
+    this.winner = '';
+    this.winCount = 0;
+   
+  }
 
   createBoard() {
     for (let row = 0; row < 6; row++) {
@@ -34,50 +31,61 @@ class Board extends Component {
     for (let row = 5; row >= 0; row--) {
       if (this.board[row][col].color === "") {
         this.board[row][col].color = this.game.currentPlayer.color;
+        this.game.currentPlayer.moveNumber++;
         this.board[row][col].render();
         this.checkForWin();
-        if (this.gameWon === true){
+        if (this.gameWon === true) {
           break
         };
         this.checkForTie();
         this.game.changePlayer();
+        if (this.game.currentPlayer.type === 'computer') {
+          this.makeMoveBot();
+        }
         break;
       }
     }
     return false;
   }
 
-  //make a function for a bot
-  /* makeMoveBot(col) {
-    for (let row = 5; row >= 0; row--) {
-      if (this.board[row][col].color === "") {
-        this.board[row][col].color = this.game.currentPlayer.color;
-        this.board[row][col].render();
-        this.game.changePlayer();
-        this.checkForTie();
-        this.checkForWin();
-       if (this.game.checkPlayerType() === this.game.isNotHuman) {
-          if (this.winnerColor) {
-            return;
-          }
-          this.makeMoveBot(Math.floor(Math.random() * 7));
-        }
-        if (this.count + this.count === 42 && !this.winnerColor) {
-         // $('.draw-modal').modal('show');
-        }
-        return;
-      }
-    }
-  }*/
+  makeMoveBot() {
 
+    setTimeout(() => {
+      let emptyCell = true;
+      while (emptyCell) {
+        let randomCol = Math.floor(Math.random() * 7);
+
+        for (let row = 5; row >= 0; row--) {
+          if (this.board[row][randomCol].color === "") {
+            if (this.game.currentPlayer.type === 'human') {
+              this.makeMove();
+            }
+            else if (this.game.currentPlayer.type === 'computer') {
+              this.board[row][randomCol].color = this.game.currentPlayer.color;
+              this.game.currentPlayer.moveNumber++;
+              emptyCell = false;
+              this.board[row][randomCol].render();
+              this.checkForWin();
+              if (this.gameWon === true) {
+                break
+              };
+              this.checkForTie();
+              this.game.changePlayer();
+              break;
+            }
+          }
+        }
+      }
+    }, 1000)
+
+  }
   //to check for win create a variable for winner color, set winning conditions and alert result
-  checkForWin(){
+  checkForWin() {
     let winnerColor;
-    this.gameWon =false;
+    this.gameWon = false;
     if (this.checkVerticals() === 'yellow' || this.checkVerticals() === 'red') {
       winnerColor = this.checkVerticals();
       this.gameWon = true;
-      
       this.theWinnerIs();
       this.render();
 
@@ -98,14 +106,8 @@ class Board extends Component {
       this.gameWon = true;
       this.theWinnerIs();
       this.render();
-    }      
     }
-  //   } else if (this.checkHorizontals() && this.checkVerticals() && this.checkDiagonalsBLtoTR() && this.checkDiagonalsTLtoBR() !== 'yellow' ){
-  //     this.game.modalHide();
-  //   }else if (this.checkHorizontals() && this.checkVerticals() && this.checkDiagonalsBLtoTR() && this.checkDiagonalsTLtoBR() !== 'red' ){
-  //     this.game.modalHide();
-  // }
-
+  }
 
   //checking for a tie
   checkForTie() {
@@ -117,14 +119,14 @@ class Board extends Component {
       }
     }
     if (count === 7 && this.checkVerticals() === false && this.checkHorizontals() === false && this.checkDiagonalsBLtoTR() === false && this.checkDiagonalsTLtoBR() === false) {
-     this.draw = true;
-     this.isDraw();
-     this.render();
+      this.draw = true;
+      this.isDraw();
+      this.render();
     }
   }
-//loop throgh all cells to find 4 in a row horizontal, vertical and diagonal up and down
-//loop through all colors aka the 2 players and then through all cells to find same 
-//color next to each other
+  //loop throgh all cells to find 4 in a row horizontal, vertical and diagonal up and down
+  //loop through all colors aka the 2 players and then through all cells to find same 
+  //color next to each other
   checkHorizontals() {
     let colors = ['red', 'yellow'];
     for (let color of colors) {
@@ -191,7 +193,6 @@ class Board extends Component {
     return false;
   }
 
-
   checkDiagonalsTLtoBR() {
     let colors = ['red', 'yellow'];
     for (let color of colors) {
@@ -212,22 +213,18 @@ class Board extends Component {
     return false;
   }
 
-  // modalHide(){
-  //   if(this.gameWon){
-  //     $('#modal').modal('hide');
-  //   }
-  //   this.render();
-  // }
-//modal to show the winner
-theWinnerIs() {
-  this.gameWon = true;
- $('#modal').modal('show');
-   console.log('modal');
-     }
+  //modal to show the winner
+  theWinnerIs() {
+    this.gameWon = true;
+    this.winner = this.game.currentPlayer.name;
+    this.winCount = this.game.currentPlayer.moveNumber;
+    $('#modal').modal('show');
+    App.highscorePage.addToHighscore(this.winner, this.winCount);
+  }
 
-isDraw(){
-  this.draw = true;
-  $('#draw-modal').modal('show');
-}
+  isDraw() {
+    this.draw = true;
+    $('#draw-modal').modal('show');
+  }
 
 }

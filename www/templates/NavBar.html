@@ -1,7 +1,7 @@
 <div>
-  ${!this.showingCancelButton ?`<nav class="navbar navbar-expand-lg navbar-light p-4">
+  ${!this.showingCancelButton ?`<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
     <a class="navbar-brand" href="#">
-      <img src="/images/superMarioLogo2.jpg">
+      <img src="/images/superMarioLogo2.jpg" width="60" height="60" class="d-inline-block align-top" alt="">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent"
       aria-expanded="false" aria-label="Toggle navigation">
@@ -13,5 +13,5 @@
       </ul>
     </div>
   </nav>`:''}
-  ${this.showingCancelButton ?'<button type="button" class="cancel-button btn btn-warning btn-lg btn-block">Avbryt</button>':''}
+  ${this.showingCancelButton ?'<button type="button" class="cancel-button btn-light btn btn-lg btn-block">Avbryt</button>':''}
 </div>
