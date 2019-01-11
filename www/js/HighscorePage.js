@@ -28,15 +28,5 @@ class HighscorePage extends Component {
         this.render();
         JSON._save('highscore-data', {data: this});
     }
-
-
-//TO DO:
-  //what should go into highscore? => name and moves
-  //function to catch input name
-  //function to limit highscore list' length to max 10
-  //function to count number of player moves
-
-  //after game finished add the winnerPlayer + moves to highscoreList
-  //moves of winnerPlayer and sort them in the highscorelist 1<10 
 }
 
