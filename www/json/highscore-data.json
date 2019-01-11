@@ -11,6 +11,64 @@
         },
         "⚙": "HighscorePage"
       },
+      "list": [
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "hdab",
+          "score": 4,
+          "⚙": "HighscoreItem"
+        },
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "sandra",
+          "score": 4,
+          "⚙": "HighscoreItem"
+        },
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "sandra",
+          "score": 4,
+          "⚙": "HighscoreItem"
+        },
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "Aleksandra",
+          "score": 4,
+          "⚙": "HighscoreItem"
+        },
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "nala",
+          "score": 5,
+          "⚙": "HighscoreItem"
+        },
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "jävel",
+          "score": 5,
+          "⚙": "HighscoreItem"
+        },
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "JOnatan",
+          "score": 6,
+          "⚙": "HighscoreItem"
+        }
+      ],
       "items": [
         {
           "highscoreList": {
@@ -57,6 +115,15 @@
             "↻": "$.data.highscoreList"
           },
           "name": "dak",
+          "score": 4,
+          "⚙": "HighscoreItem"
+        }
+      ],
+      "⚙": "HighscoreList"
+    },
+    "⚙": "HighscorePage"
+  }
+}k",
           "score": 4,
           "⚙": "HighscoreItem"
         }
