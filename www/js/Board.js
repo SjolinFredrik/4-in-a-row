@@ -162,6 +162,18 @@ class Board extends Component {
     return false;
   }
 
+    } else if (this.checkDiagonalsTLtoBR() === 'yellow' || this.checkDiagonalsTLtoBR() === 'red') {
+      winnerColor = this.checkDiagonalsTLtoBR();
+      this.gameWon = true;
+      this.theWinnerIs();
+      this.render();
+    }
+  }
+  //   } else if (this.checkHorizontals() && this.checkVerticals() && this.checkDiagonalsBLtoTR() && this.checkDiagonalsTLtoBR() !== 'yellow' ){
+  //     this.game.modalHide();
+  //   }else if (this.checkHorizontals() && this.checkVerticals() && this.checkDiagonalsBLtoTR() && this.checkDiagonalsTLtoBR() !== 'red' ){
+  //     this.game.modalHide();
+  // }
 
   checkVerticals() {
     let colors = ['red', 'yellow'];

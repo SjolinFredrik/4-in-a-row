@@ -8,20 +8,17 @@ class HighscorePage extends Component {
     this.game = game;
   }
 
-
-
-  
-  addItem() {
+  addItemtoHighscore() {
     let playerName = 'Player name';
     let playerScore = 'Player score';
     this.highscoreList.addItem(playerName, playerScore);
     this.update();
   }
 
-    addHiScore(playerName, playerScore){
-        this.highscoreList.addHiscore(playerName, playerScore);
-        this.update();
-    }
+  addToHighscore(playerName, playerScore) {
+    this.highscoreList.addToHighscore(playerName, playerScore);
+    this.update();
+  }
 
 
     update(){
