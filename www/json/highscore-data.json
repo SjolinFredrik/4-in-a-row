@@ -83,6 +83,14 @@
           "name": "peter",
           "score": 4,
           "⚙": "HighscoreItem"
+        },
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "mel",
+          "score": 4,
+          "⚙": "HighscoreItem"
         }
       ],
       "items": [
