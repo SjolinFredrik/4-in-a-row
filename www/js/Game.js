@@ -20,8 +20,7 @@ class Game extends Component {
     this.gamePage.restartGame(this.players);
   }
 
-  changePlayer() {
-   
+  changePlayer() {   
     this.currentPlayer = this.currentPlayer === this.players[0] ? this.players[1] : this.players[0];
     this.showPlayer = this.currentPlayer.name;
     this.render();
