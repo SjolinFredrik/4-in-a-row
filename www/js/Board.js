@@ -36,6 +36,7 @@ class Board extends Component {
     for (let row = 5; row >= 0; row--) {
       if (this.board[row][col].color === "") {
         this.board[row][col].color = this.game.currentPlayer.color;
+        this.game.currentPlayer.moveNumber++;
         this.board[row][col].render();
         this.checkForWin();
         if (this.gameWon === true) {
@@ -70,6 +71,7 @@ class Board extends Component {
             else if (this.game.currentPlayer.type === 'computer') {
 
               this.board[row][randomCol].color = this.game.currentPlayer.color;
+              this.game.currentPlayer.moveNumber++;
               emptyCell = false;
               this.board[row][randomCol].render();
               this.checkForWin();

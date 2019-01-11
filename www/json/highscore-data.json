@@ -24,8 +24,72 @@
           "highscoreList": {
             "↻": "$.data.highscoreList"
           },
-          "name": "ddaaator",
-          "score": 12,
+          "name": "hbdjah",
+          "score": 4,
+          "⚙": "HighscoreItem"
+        },
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "human",
+          "score": 4,
+          "⚙": "HighscoreItem"
+        },
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "jonathan",
+          "score": 4,
+          "⚙": "HighscoreItem"
+        },
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "jävel",
+          "score": 4,
+          "⚙": "HighscoreItem"
+        },
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "spelare",
+          "score": 4,
+          "⚙": "HighscoreItem"
+        },
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "player",
+          "score": 4,
+          "⚙": "HighscoreItem"
+        },
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "human",
+          "score": 5,
+          "⚙": "HighscoreItem"
+        },
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "uman",
+          "score": 5,
+          "⚙": "HighscoreItem"
+        },
+        {
+          "highscoreList": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "sandra",
+          "score": 5,
           "⚙": "HighscoreItem"
         }
       ],

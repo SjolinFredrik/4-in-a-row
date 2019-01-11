@@ -17,12 +17,11 @@ class Game extends Component {
   }
 
   restartGame(){
-    console.log('this.players', this.players);
     this.gamePage.restartGame(this.players);
   }
 
   changePlayer() {
-    this.currentPlayer.moveNumber++;
+   
     this.currentPlayer = this.currentPlayer === this.players[0] ? this.players[1] : this.players[0];
     this.showPlayer = this.currentPlayer.name;
     this.render();
